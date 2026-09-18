@@ -1,7 +1,0 @@
-{
-  "name":"bpsc-prelims-nexus-server-auth",
-  "version":"2.0.0",
-  "private":true,
-  "scripts":{"start":"node server.js"},
-  "dependencies":{"cookie-parser":"^1.4.7","express":"^5.1.0","pg":"^8.16.3"}
-}
