@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: bpsc-prelims-nexus
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: bpsc-nexus-db
+          property: connectionString
+      - key: ADMIN_ID
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+
+databases:
+  - name: bpsc-nexus-db
+    databaseName: bpsc_nexus
+    user: bpsc_nexus
