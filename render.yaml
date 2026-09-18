@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: bpsc-prelims-nexus
-    runtime: static
-    buildCommand: ""
-    staticPublishPath: .
-    autoDeploy: true
