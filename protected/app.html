@@ -518,17 +518,6 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;bac
 .bpn-resume-modal{position:fixed;inset:0;z-index:9999;display:none;place-items:center;padding:18px;background:rgba(1,5,12,.82);backdrop-filter:blur(16px)}
 .bpn-resume-modal.show{display:grid}.bpn-resume-card{width:min(560px,100%);padding:30px;border-radius:26px;border:1px solid rgba(116,185,255,.25);background:linear-gradient(145deg,#101c2d,#060c15);box-shadow:0 35px 110px rgba(0,0,0,.7),0 0 55px rgba(50,155,255,.12);text-align:center}.bpn-resume-icon{width:58px;height:58px;margin:0 auto 14px;border-radius:18px;display:grid;place-items:center;font-size:29px;color:#72d6ff;background:rgba(62,166,255,.1);border:1px solid rgba(114,214,255,.28)}.bpn-resume-kicker{font-size:9px;letter-spacing:3px;color:#7891a9}.bpn-resume-card h2{margin:8px 0;font-size:27px}.bpn-resume-card p{margin:0;color:#aabbd0;line-height:1.65;font-size:13px}.bpn-resume-card p strong{color:#fff}.bpn-resume-progress{height:5px;margin:22px 0;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}.bpn-resume-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#35aaff,#8be6ff);border-radius:99px}.bpn-resume-actions{display:grid;grid-template-columns:.8fr .9fr 1.35fr;gap:8px}.bpn-resume-actions button{padding:12px 10px;border-radius:11px;font-weight:850;cursor:pointer}.bpn-resume-secondary{background:rgba(255,255,255,.045);color:#d7e3ef;border:1px solid rgba(255,255,255,.1)}.bpn-resume-primary{background:linear-gradient(110deg,#35aaff,#8be6ff);color:#06101a;border:0}.bpn-resume-note{margin-top:15px;color:#657b92;font-size:9px;line-height:1.5}@media(max-width:560px){.bpn-resume-card{padding:24px}.bpn-resume-actions{grid-template-columns:1fr 1fr}.bpn-resume-primary{grid-column:1/-1;order:-1}}
 </style>
-
-<style id="niva-ask-ui">
-.niva-inline-wrap{margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.08)}
-.niva-ask-btn{appearance:none;border:1px solid color-mix(in srgb,var(--nx-accent,#55bfff) 55%,transparent);background:color-mix(in srgb,var(--nx-accent,#55bfff) 9%,transparent);color:var(--nx-accent,#55bfff);border-radius:11px;padding:9px 12px;font-weight:850;font-size:12px;cursor:pointer;transition:.18s ease}
-.niva-ask-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px var(--nx-glow,rgba(55,170,255,.18));background:color-mix(in srgb,var(--nx-accent,#55bfff) 14%,transparent)}
-#bpnNivaModal{position:fixed;inset:0;z-index:220000;display:none;place-items:center;padding:18px;background:rgba(0,0,0,.72);backdrop-filter:blur(14px)}
-#bpnNivaModal.show{display:grid}
-.bpn-niva-card{width:min(720px,100%);max-height:88vh;overflow:auto;border:1px solid var(--nx-line,rgba(255,255,255,.12));border-radius:24px;background:linear-gradient(145deg,var(--nx-surface,#091421),var(--nx-bg,#040912));box-shadow:0 35px 110px rgba(0,0,0,.65),0 0 70px var(--nx-glow,rgba(55,170,255,.15));padding:20px}
-.bpn-niva-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.bpn-niva-kicker{font-size:9px;letter-spacing:.22em;color:var(--nx-accent,#55bfff);font-weight:900}.bpn-niva-head h2{margin:6px 0 4px;color:var(--nx-text,#f4f7fb);font-size:23px}.bpn-niva-head p{margin:0;color:var(--nx-muted,#9aaabd);font-size:11px}.bpn-niva-close{width:38px;height:38px;border-radius:11px;border:1px solid var(--nx-line,rgba(255,255,255,.12));background:rgba(255,255,255,.04);color:var(--nx-text,#fff);font-size:20px;cursor:pointer}.bpn-niva-context{margin-top:16px;padding:14px;border:1px solid var(--nx-line,rgba(255,255,255,.1));border-radius:15px;background:rgba(255,255,255,.025)}.bpn-niva-context .label{font-size:9px;letter-spacing:.14em;color:var(--nx-accent2,#e7c27b);font-weight:900;margin-bottom:7px}.bpn-niva-question{font-size:14px;line-height:1.6;color:var(--nx-text,#f4f7fb)}.bpn-niva-explain{margin-top:9px;color:var(--nx-muted,#9aaabd);font-size:11px;line-height:1.6;max-height:130px;overflow:auto}.bpn-niva-input{width:100%;min-height:92px;resize:vertical;margin-top:14px;border:1px solid var(--nx-line,rgba(255,255,255,.12));border-radius:14px;background:rgba(0,0,0,.18);color:var(--nx-text,#fff);padding:13px;outline:none;font:inherit;font-size:13px}.bpn-niva-input:focus{border-color:var(--nx-accent,#55bfff)}.bpn-niva-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:10px}.bpn-niva-send{border:0;border-radius:11px;padding:11px 16px;background:linear-gradient(120deg,var(--nx-accent,#55bfff),var(--nx-accent2,#e7c27b));color:#061019;font-weight:950;cursor:pointer}.bpn-niva-status{min-height:20px;margin-top:10px;color:var(--nx-muted,#9aaabd);font-size:11px}.bpn-niva-answer{margin-top:14px;padding:15px;border-radius:15px;border:1px solid color-mix(in srgb,var(--nx-accent,#55bfff) 25%,transparent);background:color-mix(in srgb,var(--nx-accent,#55bfff) 5%,transparent);color:var(--nx-text,#f4f7fb);line-height:1.65;font-size:13px;white-space:pre-wrap}.bpn-niva-answer:empty{display:none}
-@media(max-width:600px){.bpn-niva-card{padding:15px;border-radius:19px}.bpn-niva-head h2{font-size:19px}}
-</style>
 </head>
 <div id="bpnAuthGate"><div class="bpn-card"><div class="bpn-brand"><div class="bpn-mark">BN</div><div><b>BPSC PRELIMS NEXUS</b><small>INDIVIDUAL STUDENT ACCESS</small></div></div><div class="bpn-kicker">SERVER-VERIFIED LOGIN</div><h1>Welcome.</h1><p>Use the Student ID and password issued by BPSC Nexus. Accounts are verified against the central server.</p><form id="bpnStudentForm"><div class="bpn-field"><label>Student ID</label><input id="bpnStudentId" autocomplete="username" placeholder="Enter Student ID" required></div><div class="bpn-field"><label>Password</label><input id="bpnStudentPw" type="password" autocomplete="current-password" placeholder="Enter Password" required></div><button class="bpn-btn" id="bpnStudentLogin">LOGIN TO BPSC NEXUS</button><div id="bpnStudentMsg" class="bpn-msg"></div></form><button class="bpn-admin-btn" id="bpnAdminOpen">⚙ ADMIN ACCESS</button><div class="bpn-note">No student accounts are generated or validated inside this HTML. Authentication is handled by your BPSC Nexus server.</div></div></div>
 <div id="bpnAdmin"><div class="bpn-adminbox"><div class="bpn-head"><div><h2>BPSC NEXUS — ADMIN CONTROL</h2><small>CENTRAL STUDENT ACCOUNT MANAGEMENT</small></div><button class="bpn-close" id="bpnAdminClose">Close</button></div><div class="bpn-form"><input id="bpnNewName" placeholder="Student name"><input id="bpnNewExpiry" type="date"><input id="bpnNewId" placeholder="Student ID (optional)"><button class="bpn-create" id="bpnCreate">CREATE ACCOUNT</button></div><div id="bpnCreated" class="bpn-created"></div><div id="bpnAdminMsg" class="bpn-msg"></div><div class="bpn-tablewrap"><table class="bpn-table"><thead><tr><th>STUDENT ID</th><th>NAME</th><th>PASSWORD</th><th>EXPIRY</th><th>STATUS</th><th>LAST LOGIN</th><th>ACTION</th></tr></thead><tbody id="bpnStudentRows"></tbody></table></div><div class="bpn-admin-note">Only an authenticated Admin session can create, block, or activate student accounts. Student credentials are stored in PostgreSQL on the BPSC Nexus server, not in this HTML.</div></div></div><body>
@@ -591,15 +580,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;bac
       <div class="nx-info"><span><b>5</b> INSTITUTIONS</span><i></i><span><b>∞</b> MULTIPLE TESTS</span><i></i><span><b>1</b> PREPARATION HUB</span></div>
     </header>
 
-    
-<style id="bpnFrontResumeStyles">
-.bpn-front-resume{display:none;position:relative;margin:20px auto 0;width:min(720px,100%);padding:1px;border-radius:20px;background:linear-gradient(110deg,rgba(53,170,255,.75),rgba(139,230,255,.32),rgba(53,170,255,.75));box-shadow:0 18px 55px rgba(0,0,0,.32),0 0 35px rgba(53,170,255,.12)}
-.bpn-front-resume.show{display:block}.bpn-front-resume-inner{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:19px;background:linear-gradient(145deg,rgba(10,25,43,.96),rgba(5,11,20,.98));text-align:left}.bpn-front-resume-icon{width:46px;height:46px;flex:0 0 46px;border-radius:14px;display:grid;place-items:center;color:#8be6ff;background:rgba(53,170,255,.1);border:1px solid rgba(139,230,255,.24);font-size:24px}.bpn-front-resume-copy{min-width:0;flex:1}.bpn-front-resume-copy small{display:block;font-size:8px;letter-spacing:.18em;color:#6f91ae;font-weight:900;margin-bottom:4px}.bpn-front-resume-copy b{display:block;color:#fff;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bpn-front-resume-copy span{display:block;color:#9fb3c9;font-size:11px;margin-top:4px}.bpn-front-resume-btn{border:0;border-radius:12px;padding:12px 17px;background:linear-gradient(110deg,#35aaff,#8be6ff);color:#04111c;font-weight:950;cursor:pointer;white-space:nowrap;box-shadow:0 8px 24px rgba(53,170,255,.18)}.bpn-front-resume-btn:hover{transform:translateY(-1px)}
-@media(max-width:600px){.bpn-front-resume-inner{padding:13px;gap:10px}.bpn-front-resume-icon{width:40px;height:40px;flex-basis:40px;font-size:21px}.bpn-front-resume-copy b{font-size:13px}.bpn-front-resume-copy span{font-size:10px}.bpn-front-resume-btn{padding:10px 12px;font-size:10px}}
-</style>
-<div class="bpn-front-resume" id="bpnFrontResume" aria-live="polite"><div class="bpn-front-resume-inner"><div class="bpn-front-resume-icon">↻</div><div class="bpn-front-resume-copy"><small>LAST TEST SAVED</small><b id="bpnFrontResumeName">Resume your last test</b><span id="bpnFrontResumeMeta">Your previous test session is ready to continue.</span></div><button type="button" class="bpn-front-resume-btn" id="bpnFrontResumeBtn">RESUME TEST →</button></div></div>
-
-<section class="nx-mode-showcase" aria-label="Test modes">
+    <section class="nx-mode-showcase" aria-label="Test modes">
       <div class="nx-mode-card nx-mode-practice">
         <div class="nx-mode-icon">✎</div>
         <div class="nx-mode-copy"><span>MODE 01</span><h3>Practice Mode</h3><p>Instant feedback after every answer</p></div>
@@ -693,7 +674,6 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;bac
     <div class="wrap quiz-top-inner">
       <div class="quiz-mainbar">
         <button class="exit-btn" id="quizExitBtn" type="button">← Exit</button>
-        <button class="pause-btn" id="quizPauseBtn" type="button" title="Save your progress and pause this test">⏸ Pause &amp; Save</button>
         <div class="quiz-heading">
           <h1 id="quizModeTitle">Practice Mode</h1>
           <div class="quiz-summary">
@@ -703,7 +683,8 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;bac
           </div>
         </div>
         <div class="quiz-top-actions">
-          <button class="quiz-action nav-primary" id="openNavigator" type="button">Question Navigator</button>
+          <button class="quiz-action quiz-theme-inline" id="quizThemeBtn" type="button">✦ Theme</button>
+          <button class="quiz-action quiz-pause" id="quizPauseBtn" type="button">⏸ Pause &amp; Save</button>
         </div>
       </div>
       <div class="quiz-subbar">
@@ -737,7 +718,8 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;bac
 
     <div class="bottom-controls">
       <button class="bottom-btn" id="prev" type="button">← Previous</button>
-      <button class="bottom-btn submit-btn" id="submit" type="button">Submit Quiz</button>
+      <button class="bottom-btn navigator-bottom-btn" id="openNavigatorBottom" type="button">☷ Questions</button>
+      <button class="bottom-btn submit-btn" id="submit" type="button">Submit</button>
       <button class="bottom-btn" id="next" type="button">Next →</button>
     </div>
   </main>
@@ -989,7 +971,7 @@ function render(){
   document.getElementById('question').innerHTML=qhtml;
   let oh='';for(const l of letters){let cls='option-ui '+(val===l?'selected':'');if(mode==='practice'&&val){if(l===q.answer)cls+=' correct';else if(l===val&&l!==q.answer)cls+=' wrong'}let text='';if(lang==='both')text=`<div class="option-copy"><div>${esc(q.opts?.[l]||'')}</div>${q.opts_hi?.[l]?`<div class="hi">${esc(q.opts_hi[l])}</div>`:''}</div>`;else if(lang==='hi')text=`<div class="option-copy">${esc(q.opts_hi?.[l]||q.opts?.[l]||'')}</div>`;else text=`<div class="option-copy">${esc(q.opts?.[l]||'')}</div>`;oh+=`<button type="button" class="${cls}" data-answer="${l}"><span class="option-letter">${l}</span>${text}</button>`}
   document.getElementById('opts').innerHTML=oh;document.querySelectorAll('.option-ui').forEach(b=>b.onclick=()=>choose(b.dataset.answer));
-  let f='';if(mode==='practice'&&val){const ok=val===q.answer;f=`<div class="feedback-ui ${ok?'good':'bad'}"><b>${ok?'✓ Correct Answer':'✕ Incorrect Answer'}</b><div style="margin-top:7px"><strong>Correct Answer: ${esc(q.answer)}</strong></div>${q.ex_en?`<div class="explain"><b>🇬🇧 English Explanation</b><br>${esc(q.ex_en)}</div>`:''}${q.ex_hi?`<div class="explain"><b>🇮🇳  </b><br>${esc(q.ex_hi)}</div>`:''}<div class="niva-inline-wrap"><button type="button" class="niva-ask-btn" data-niva-qid="${qid}">✦ Ask Niva about this question</button></div></div>`}
+  let f='';if(mode==='practice'&&val){const ok=val===q.answer;f=`<div class="feedback-ui ${ok?'good':'bad'}"><b>${ok?'✓ Correct Answer':'✕ Incorrect Answer'}</b><div style="margin-top:7px"><strong>Correct Answer: ${esc(q.answer)}</strong></div>${q.ex_en?`<div class="explain"><b>🇬🇧 English Explanation</b><br>${esc(q.ex_en)}</div>`:''}${q.ex_hi?`<div class="explain"><b>🇮🇳  </b><br>${esc(q.ex_hi)}</div>`:''}</div>`}
   document.getElementById('feedback').innerHTML=f;renderBookmark();renderPalette();
   document.getElementById('prev').disabled=i===1;document.getElementById('next').disabled=i===total;
 }
@@ -1465,25 +1447,12 @@ document.getElementById('prev').onclick=()=>move(-1);document.getElementById('ne
   };
 })();
 </script>
-<style id="bpnPauseStyles">
-.pause-btn{appearance:none;border:1px solid rgba(99,194,255,.30);background:rgba(53,170,255,.08);color:#bfe9ff;border-radius:12px;padding:9px 12px;font:800 11px/1 system-ui,-apple-system,sans-serif;cursor:pointer;transition:.2s ease}.pause-btn:hover{transform:translateY(-1px);border-color:rgba(139,230,255,.65);background:rgba(53,170,255,.14);box-shadow:0 8px 24px rgba(53,170,255,.12)}.pause-btn:disabled{opacity:.6;cursor:wait}@media(max-width:700px){.pause-btn{padding:8px 10px;font-size:10px}}
-</style>
 <style>
 /* Detailed English-only result analysis */
 .analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 24px}.analysis-panel{border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:18px;background:rgba(255,255,255,.025)}.analysis-panel h2{margin:0 0 14px;font-size:16px}.analysis-metric{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.055);font-size:12px;color:#9fb0c2}.analysis-metric b{color:#eef5fc}.analysis-bar{height:5px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden;margin:11px 0}.analysis-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#fff);border-radius:99px}.detailed-q{border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:20px;background:linear-gradient(145deg,rgba(12,20,33,.82),rgba(6,11,19,.9));box-shadow:0 15px 40px rgba(0,0,0,.18)}.detailed-q.is-correct{border-left:3px solid #54e6a5}.detailed-q.is-wrong{border-left:3px solid #ff627c}.detailed-q.is-unattempted{border-left:3px solid #8998aa}.dq-head{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:10px;letter-spacing:.13em;color:#8fa2b7}.dq-head strong{color:#54e6a5}.is-wrong .dq-head strong{color:#ff7188}.is-unattempted .dq-head strong{color:#a8b5c3}.dq-tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.dq-tags span{font-size:9px;color:#a9b9c9;border:1px solid rgba(255,255,255,.08);padding:5px 7px;border-radius:7px;background:rgba(255,255,255,.025)}.detailed-q h3{font-size:17px;line-height:1.55;margin:8px 0 13px}.dq-answer-line{display:flex;gap:20px;flex-wrap:wrap;font-size:11px;color:#91a3b5;padding:11px 12px;border-radius:10px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}.dq-answer-line b{color:#f1f7fd}.analysis-options{display:grid;gap:7px;margin-top:13px}.analysis-option{display:flex;align-items:flex-start;gap:10px;padding:10px 11px;border-radius:10px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025);font-size:12px;color:#c9d5e0}.analysis-option>b{width:25px;height:25px;display:grid;place-items:center;border-radius:7px;background:rgba(255,255,255,.06);color:#b9c9d8;flex:0 0 auto}.analysis-option span{flex:1;line-height:1.5}.analysis-option em{font-style:normal;font-size:8px;letter-spacing:.08em;color:#54e6a5;text-transform:uppercase}.analysis-option.wrong-option em{color:#ff7188}.analysis-option.correct-option{border-color:rgba(84,230,165,.28);background:rgba(84,230,165,.055)}.analysis-option.wrong-option{border-color:rgba(255,98,124,.28);background:rgba(255,98,124,.055)}.dq-explanation{margin-top:15px;padding:14px;border-radius:13px;border:1px solid rgba(255,214,107,.13);background:rgba(255,214,107,.035);color:#cbd7e2;font-size:12px;line-height:1.72;white-space:normal}.ex-label{font-size:9px;letter-spacing:.16em;color:#ffd66b;margin-bottom:7px;font-weight:900}.review-title{margin-top:26px;font-size:22px}
 @media(max-width:760px){.analysis-grid{grid-template-columns:1fr}.detailed-q{padding:16px}.detailed-q h3{font-size:15px}.dq-answer-line{gap:8px;flex-direction:column}.analysis-option{font-size:11px}}
 </style>
-\n<div id="modeTransition" aria-hidden="true"><canvas id="modeCanvas"></canvas><div class="mode-vignette"></div><div class="mode-scan"></div><div class="mode-core"><div class="mode-symbol" id="modeSymbol">✦</div></div><div class="mode-copy"><div class="over" id="modeOver">INITIALIZING</div><h2 id="modeTitle">Practice Mode</h2><p id="modeSub">Preparing your learning environment</p></div><div class="mode-progress"><i></i></div></div>\n<script id="bpnPauseAndHistory">
-(function(){
-'use strict';
-const btn=document.getElementById('quizPauseBtn');
-if(!btn)return;
-function leave(){try{if(typeof tick!=='undefined'&&tick)clearInterval(tick)}catch(e){}try{if(typeof closeNav==='function')closeNav();if(typeof closeSubmit==='function')closeSubmit()}catch(e){}const app=document.getElementById('app'),result=document.getElementById('result'),library=document.getElementById('library'),home=document.getElementById('home');if(app)app.classList.add('hidden');if(result)result.classList.add('hidden');if(library)library.classList.add('hidden');if(home)home.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});}
-btn.addEventListener('click',async()=>{if(btn.disabled)return;btn.disabled=true;btn.textContent='⏳ Saving…';try{if(window.bpnResumeTest&&typeof window.bpnResumeTest.save==='function')window.bpnResumeTest.save();if(typeof window.bpnCloudSync==='function')await window.bpnCloudSync();btn.textContent='✓ Saved';setTimeout(()=>{btn.disabled=false;btn.textContent='⏸ Pause & Save';leave()},450)}catch(e){btn.disabled=false;btn.textContent='⏸ Pause & Save';alert('Could not confirm the save. Please check your internet connection and try again.')}});
-})();
-</script>
-
-<script>
+\n<div id="modeTransition" aria-hidden="true"><canvas id="modeCanvas"></canvas><div class="mode-vignette"></div><div class="mode-scan"></div><div class="mode-core"><div class="mode-symbol" id="modeSymbol">✦</div></div><div class="mode-copy"><div class="over" id="modeOver">INITIALIZING</div><h2 id="modeTitle">Practice Mode</h2><p id="modeSub">Preparing your learning environment</p></div><div class="mode-progress"><i></i></div></div>\n<script>
 /* ===== FINAL EXIT CONTROL FIX ===== */
 (function(){
   window.confirmExit=function(){
@@ -1514,9 +1483,11 @@ btn.addEventListener('click',async()=>{if(btn.disabled)return;btn.disabled=true;
   <div class="nx-theme-modal" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
     <div class="nx-modal-head"><div><span class="nx-modal-kicker">PERSONALISE YOUR NEXUS</span><h2 id="themeModalTitle">Choose Your Theme</h2><p>Change the visual atmosphere across the entire application.</p></div><button type="button" class="nx-modal-x" id="themeClose" aria-label="Close">×</button></div>
     <div class="nx-theme-grid">
-      <button class="nx-theme-card" data-theme-choice="midnight"><span class="theme-preview midnight"></span><span><b>01 — MIDNIGHT</b><small>Calm • focused • easy on the eyes</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="dark"><span class="theme-preview dark"></span><span><b>02 — DARK</b><small>Distraction-free • serious • ultra focused</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="arghya"><span class="theme-preview arghya"></span><span><b>03 — ARGHYA</b><small>BPSC signature • antique gold • rooted</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="classic"><span class="theme-preview classic"></span><span><b>01 — CLASSIC</b><small>Clean academic • blue • warm coral</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="midnight"><span class="theme-preview midnight"></span><span><b>02 — MIDNIGHT</b><small>Deep focus • navy • cool blue</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="ivy"><span class="theme-preview ivy"></span><span><b>03 — IVY</b><small>Calm study • sage • emerald</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="dark"><span class="theme-preview dark"></span><span><b>04 — DARK</b><small>Distraction-free • graphite • amber</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="arghya"><span class="theme-preview arghya"></span><span><b>05 — ARGHYA</b><small>Signature BPSC • charcoal • antique gold</small></span><em>✓</em></button>
     </div>
   </div>
 </div>
@@ -1557,158 +1528,15 @@ body[data-nx-theme="study"] .nx-aurora{opacity:.10!important;filter:blur(70px)!i
 .nx-overlay{position:fixed;inset:0;z-index:200000;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.62);backdrop-filter:blur(16px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility .22s ease}.nx-overlay.open{opacity:1;visibility:visible;pointer-events:auto}.nx-theme-modal,.nx-utility-modal{width:min(760px,100%);max-height:min(86vh,760px);overflow:auto;border:1px solid var(--nx-line);border-radius:26px;background:linear-gradient(145deg,color-mix(in srgb,var(--nx-surface) 96%,transparent),color-mix(in srgb,var(--nx-bg) 96%,transparent));box-shadow:0 35px 110px rgba(0,0,0,.65),0 0 70px var(--nx-glow);padding:22px}.nx-modal-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.nx-modal-kicker{font-size:9px;letter-spacing:.25em;color:var(--nx-accent);font-weight:900}.nx-modal-head h2{margin:7px 0 4px;font-size:25px;letter-spacing:-.03em;color:var(--nx-text)}.nx-modal-head p{margin:0;color:var(--nx-muted);font-size:12px}.nx-modal-x{width:38px;height:38px;border-radius:12px;border:1px solid var(--nx-line);background:rgba(255,255,255,.04);color:var(--nx-text);font-size:22px;cursor:pointer}.nx-theme-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.nx-theme-card{display:grid;grid-template-columns:62px 1fr 20px;align-items:center;gap:12px;text-align:left;padding:11px;border:1px solid var(--nx-line);background:rgba(255,255,255,.025);border-radius:16px;color:var(--nx-text);cursor:pointer;transition:.2s ease}.nx-theme-card:hover{transform:translateY(-2px);border-color:var(--nx-accent);box-shadow:0 10px 28px var(--nx-glow)}.nx-theme-card.active{border-color:var(--nx-accent);box-shadow:0 0 0 1px var(--nx-accent) inset,0 12px 30px var(--nx-glow)}.nx-theme-card b{display:block;font-size:12px}.nx-theme-card small{display:block;color:var(--nx-muted);font-size:9px;margin-top:4px;line-height:1.35}.nx-theme-card em{font-style:normal;opacity:0;color:var(--nx-accent);font-weight:900}.nx-theme-card.active em{opacity:1}.theme-preview{width:62px;height:42px;border-radius:11px;border:1px solid rgba(255,255,255,.14);position:relative;overflow:hidden}.theme-preview:after{content:"";position:absolute;right:8px;bottom:7px;width:22px;height:4px;border-radius:99px;background:currentColor;box-shadow:0 0 10px currentColor}.theme-preview.midnight{background:linear-gradient(135deg,#06111e,#10395e);color:#5bc5ff}.theme-preview.study{background:linear-gradient(135deg,#121a16,#425849);color:#d8c98f}.theme-preview.royal{background:linear-gradient(135deg,#0d0a25,#4c358c);color:#e7c46f}.theme-preview.emerald{background:linear-gradient(135deg,#03100c,#176644);color:#59d69a}.theme-preview.crimson{background:linear-gradient(135deg,#100609,#762030);color:#e4bc77}.theme-preview.arctic{background:linear-gradient(135deg,#071019,#28516b);color:#9ce4ff}.nx-utility-modal{width:min(620px,100%)}.nx-utility-body{margin-top:18px}.utility-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.utility-kpi{padding:15px;border:1px solid var(--nx-line);border-radius:15px;background:rgba(255,255,255,.025)}.utility-kpi b{display:block;font-size:23px;color:var(--nx-accent)}.utility-kpi span{display:block;margin-top:3px;font-size:9px;color:var(--nx-muted);text-transform:uppercase;letter-spacing:.08em}.utility-empty{padding:24px;border:1px dashed var(--nx-line);border-radius:16px;text-align:center;color:var(--nx-muted);line-height:1.7}.utility-list{display:grid;gap:7px;margin-top:12px}.utility-item{padding:11px 12px;border-radius:12px;border:1px solid var(--nx-line);background:rgba(255,255,255,.025);font-size:11px}.utility-item b{color:var(--nx-text)}
 @media(max-width:700px){.nx-theme-modal,.nx-utility-modal{padding:17px;border-radius:20px}.nx-theme-grid{grid-template-columns:1fr}.nx-theme-card{grid-template-columns:56px 1fr 18px}.theme-preview{width:56px;height:40px}.utility-kpis{grid-template-columns:1fr 1fr 1fr}.utility-kpi{padding:11px}.utility-kpi b{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.nx-overlay,.nx-theme-card{transition:none!important}}
-
-/* ===== BPSC NEXUS 2.0 — ACADEMIC THEME PACK ===== */
-body[data-nx-theme="classic"]{--nx-bg:#f4f7fa;--nx-surface:#ffffff;--nx-surface2:#eaf0f5;--nx-text:#17202a;--nx-muted:#647384;--nx-accent:#315f8f;--nx-accent2:#a67c3b;--nx-line:rgba(32,57,79,.14);--nx-glow:rgba(49,95,143,.08);--world-bg:#f4f7fa;--world-surface:#fff;--world-surface2:#eaf0f5;--world-text:#17202a;--world-muted:#647384;--world-accent:#315f8f;--world-accent2:#a67c3b;--world-line:rgba(32,57,79,.14);--world-glow:rgba(49,95,143,.08)}
-body[data-nx-theme="midnight"]{--nx-bg:#0b1119;--nx-surface:#121b27;--nx-surface2:#182333;--nx-text:#eef3f8;--nx-muted:#9aa9ba;--nx-accent:#6d9dcc;--nx-accent2:#c9a96b;--nx-line:rgba(180,202,225,.14);--nx-glow:rgba(90,140,190,.08);--world-bg:#0b1119;--world-surface:#121b27;--world-surface2:#182333;--world-text:#eef3f8;--world-muted:#9aa9ba;--world-accent:#6d9dcc;--world-accent2:#c9a96b;--world-line:rgba(180,202,225,.14);--world-glow:rgba(90,140,190,.08)}
-body[data-nx-theme="ivy"]{--nx-bg:#f3f5ef;--nx-surface:#fbfcf8;--nx-surface2:#e8eee3;--nx-text:#203126;--nx-muted:#68786d;--nx-accent:#47785b;--nx-accent2:#9a7a42;--nx-line:rgba(43,70,52,.14);--nx-glow:rgba(71,120,91,.07);--world-bg:#f3f5ef;--world-surface:#fbfcf8;--world-surface2:#e8eee3;--world-text:#203126;--world-muted:#68786d;--world-accent:#47785b;--world-accent2:#9a7a42;--world-line:rgba(43,70,52,.14);--world-glow:rgba(71,120,91,.07)}
-body[data-nx-theme="library"]{--nx-bg:#eee5d6;--nx-surface:#faf4e9;--nx-surface2:#e6d8c3;--nx-text:#33281e;--nx-muted:#766656;--nx-accent:#725235;--nx-accent2:#a67c3b;--nx-line:rgba(75,51,30,.16);--nx-glow:rgba(114,82,53,.08);--world-bg:#eee5d6;--world-surface:#faf4e9;--world-surface2:#e6d8c3;--world-text:#33281e;--world-muted:#766656;--world-accent:#725235;--world-accent2:#a67c3b;--world-line:rgba(75,51,30,.16);--world-glow:rgba(114,82,53,.08)}
-body[data-nx-theme="dark"]{--nx-bg:#16191d;--nx-surface:#20252a;--nx-surface2:#292f35;--nx-text:#edf0f2;--nx-muted:#a2aab2;--nx-accent:#aeb7c2;--nx-accent2:#d0a45c;--nx-line:rgba(230,235,240,.12);--nx-glow:rgba(190,200,210,.05);--world-bg:#16191d;--world-surface:#20252a;--world-surface2:#292f35;--world-text:#edf0f2;--world-muted:#a2aab2;--world-accent:#aeb7c2;--world-accent2:#d0a45c;--world-line:rgba(230,235,240,.12);--world-glow:rgba(190,200,210,.05)}
-body[data-nx-theme="arghya"]{--nx-bg:#11110f;--nx-surface:#191916;--nx-surface2:#22211d;--nx-text:#f4efe3;--nx-muted:#aaa18f;--nx-accent:#d7b35b;--nx-accent2:#efe0ad;--nx-line:rgba(215,179,91,.17);--nx-glow:rgba(215,179,91,.06);--world-bg:#11110f;--world-surface:#191916;--world-surface2:#22211d;--world-text:#f4efe3;--world-muted:#aaa18f;--world-accent:#d7b35b;--world-accent2:#efe0ad;--world-line:rgba(215,179,91,.17);--world-glow:rgba(215,179,91,.06)}
-/* Remove the old glowing atmosphere for all new themes. */
-body[data-nx-theme="classic"],body[data-nx-theme="ivy"],body[data-nx-theme="library"]{background:var(--nx-bg)!important}
-body[data-nx-theme="classic"] .nx-aurora,body[data-nx-theme="ivy"] .nx-aurora,body[data-nx-theme="library"] .nx-aurora,body[data-nx-theme="midnight"] .nx-aurora,body[data-nx-theme="dark"] .nx-aurora,body[data-nx-theme="arghya"] .nx-aurora{display:none!important}
-body[data-nx-theme] .nx-bg{opacity:.08!important}
-body[data-nx-theme] .nx-hero-pill,body[data-nx-theme] .pulse-dot{box-shadow:none!important}
-body[data-nx-theme] .nx-brand-mark{box-shadow:none!important}
-body[data-nx-theme] .nx-tool:hover{box-shadow:none!important}
-body[data-nx-theme] .nx-coach-card:hover,body[data-nx-theme] .test-card:hover{box-shadow:0 12px 30px rgba(0,0,0,.08)!important;transform:translateY(-2px)}
-body[data-nx-theme] .nx-theme-card:hover{box-shadow:0 8px 20px rgba(0,0,0,.08)!important}
-body[data-nx-theme] .nx-hero h1 strong{background:none!important;-webkit-text-fill-color:initial!important;color:var(--nx-accent2)!important}
-body[data-nx-theme] .quiz-ui .question-card-ui,body[data-nx-theme] .quiz-ui .option-ui{box-shadow:none!important}
-/* Theme-specific application surfaces */
-body[data-nx-theme="classic"] .home,body[data-nx-theme="classic"] .library,body[data-nx-theme="classic"] #result,body[data-nx-theme="classic"] .quiz-ui{background:#f4f7fa!important}
-body[data-nx-theme="classic"] .nx-coach-card,body[data-nx-theme="classic"] .nx-mode-card,body[data-nx-theme="classic"] .test-card,body[data-nx-theme="classic"] .quiz-ui .question-card-ui,body[data-nx-theme="classic"] .quiz-ui .option-ui{background:#fff!important;color:#17202a!important}
-body[data-nx-theme="classic"] .quiz-ui .quiz-top{background:#fff!important}
-body[data-nx-theme="classic"] .quiz-ui .option-ui.selected{background:#e9f1f9!important}
-body[data-nx-theme="classic"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#315f8f!important}
-body[data-nx-theme="midnight"] .home,body[data-nx-theme="midnight"] .library,body[data-nx-theme="midnight"] #result,body[data-nx-theme="midnight"] .quiz-ui{background:#0b1119!important}
-body[data-nx-theme="midnight"] .nx-coach-card,body[data-nx-theme="midnight"] .nx-mode-card,body[data-nx-theme="midnight"] .test-card,body[data-nx-theme="midnight"] .quiz-ui .question-card-ui,body[data-nx-theme="midnight"] .quiz-ui .option-ui{background:#121b27!important}
-body[data-nx-theme="midnight"] .quiz-ui .quiz-top{background:#0b1119!important}
-body[data-nx-theme="midnight"] .quiz-ui .option-ui.selected{background:#1b3045!important}
-body[data-nx-theme="midnight"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#476f99!important}
-body[data-nx-theme="ivy"] .home,body[data-nx-theme="ivy"] .library,body[data-nx-theme="ivy"] #result,body[data-nx-theme="ivy"] .quiz-ui{background:#f3f5ef!important}
-body[data-nx-theme="ivy"] .nx-coach-card,body[data-nx-theme="ivy"] .nx-mode-card,body[data-nx-theme="ivy"] .test-card,body[data-nx-theme="ivy"] .quiz-ui .question-card-ui,body[data-nx-theme="ivy"] .quiz-ui .option-ui{background:#fbfcf8!important}
-body[data-nx-theme="ivy"] .quiz-ui .quiz-top{background:#fbfcf8!important}
-body[data-nx-theme="ivy"] .quiz-ui .option-ui.selected{background:#e3ede1!important}
-body[data-nx-theme="ivy"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#47785b!important}
-body[data-nx-theme="library"] .home,body[data-nx-theme="library"] .library,body[data-nx-theme="library"] #result,body[data-nx-theme="library"] .quiz-ui{background:#eee5d6!important}
-body[data-nx-theme="library"] .nx-coach-card,body[data-nx-theme="library"] .nx-mode-card,body[data-nx-theme="library"] .test-card,body[data-nx-theme="library"] .quiz-ui .question-card-ui,body[data-nx-theme="library"] .quiz-ui .option-ui{background:#faf4e9!important}
-body[data-nx-theme="library"] .quiz-ui .quiz-top{background:#eee5d6!important}
-body[data-nx-theme="library"] .quiz-ui .option-ui.selected{background:#eadcc8!important}
-body[data-nx-theme="library"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#725235!important}
-body[data-nx-theme="dark"] .home,body[data-nx-theme="dark"] .library,body[data-nx-theme="dark"] #result,body[data-nx-theme="dark"] .quiz-ui{background:#16191d!important}
-body[data-nx-theme="dark"] .nx-coach-card,body[data-nx-theme="dark"] .nx-mode-card,body[data-nx-theme="dark"] .test-card,body[data-nx-theme="dark"] .quiz-ui .question-card-ui,body[data-nx-theme="dark"] .quiz-ui .option-ui{background:#20252a!important}
-body[data-nx-theme="dark"] .quiz-ui .quiz-top{background:#16191d!important}
-body[data-nx-theme="dark"] .quiz-ui .option-ui.selected{background:#30373e!important}
-body[data-nx-theme="dark"] .quiz-ui .bottom-btn.primary{color:#111!important;background:#aeb7c2!important}
-body[data-nx-theme="arghya"] .home,body[data-nx-theme="arghya"] .library,body[data-nx-theme="arghya"] #result,body[data-nx-theme="arghya"] .quiz-ui{background:#11110f!important}
-body[data-nx-theme="arghya"] .nx-coach-card,body[data-nx-theme="arghya"] .nx-mode-card,body[data-nx-theme="arghya"] .test-card,body[data-nx-theme="arghya"] .quiz-ui .question-card-ui,body[data-nx-theme="arghya"] .quiz-ui .option-ui{background:#191916!important}
-body[data-nx-theme="arghya"] .quiz-ui .quiz-top{background:#11110f!important}
-body[data-nx-theme="arghya"] .quiz-ui .option-ui.selected{background:#302a1c!important}
-body[data-nx-theme="arghya"] .quiz-ui .bottom-btn.primary{color:#16130b!important;background:#d7b35b!important}
-/* In-quiz typography and controls change with every theme too. */
-body[data-nx-theme="library"] .quiz-ui .question-text{font-family:Georgia,"Times New Roman",serif!important}
-body[data-nx-theme="classic"] .quiz-ui .question-text,body[data-nx-theme="ivy"] .quiz-ui .question-text{font-weight:650!important}
-body[data-nx-theme="dark"] .quiz-ui .question-card-ui{border-color:#3b434b!important}
-body[data-nx-theme="arghya"] .quiz-ui .question-card-ui{border-color:rgba(215,179,91,.24)!important}
-body[data-nx-theme="library"] .quiz-ui .question-card-ui{border-color:#c9b79c!important}
-/* New theme previews */
-.theme-preview.classic{background:linear-gradient(135deg,#f5f8fb,#dce8f2);color:#315f8f}
-.theme-preview.midnight{background:linear-gradient(135deg,#0b1119,#243a52);color:#6d9dcc}
-.theme-preview.ivy{background:linear-gradient(135deg,#f3f5ef,#dbe7d7);color:#47785b}
-.theme-preview.library{background:linear-gradient(135deg,#eee5d6,#cdbb9e);color:#725235}
-.theme-preview.dark{background:linear-gradient(135deg,#16191d,#343a40);color:#aeb7c2}
-.theme-preview.arghya{background:linear-gradient(135deg,#11110f,#39331f);color:#d7b35b}
-.theme-preview.classic:after,.theme-preview.midnight:after,.theme-preview.ivy:after,.theme-preview.library:after,.theme-preview.dark:after,.theme-preview.arghya:after{box-shadow:none}
-/* Make theme picker itself calm and academic. */
-body[data-nx-theme] .nx-theme-modal{box-shadow:0 25px 70px rgba(0,0,0,.25)!important}
-
-/* ================= FINAL STUDY-FIRST QUIZ EXPERIENCE ================= */
-/* During an active quiz, remove non-essential visual noise and keep navigation always reachable. */
-.quiz-ui .quiz-top{box-shadow:none!important;backdrop-filter:none!important}
-.quiz-ui .quiz-mainbar{grid-template-columns:auto minmax(0,1fr) auto!important;gap:10px!important}
-.quiz-ui .quiz-heading h1{font-size:15px!important}
-.quiz-ui .quiz-heading .quiz-summary{gap:4px 8px!important;font-size:10px!important}
-.quiz-ui #quizSelectedSummary,.quiz-ui #quizAnsweredTop{display:none!important}
-.quiz-ui .quiz-subbar{margin-top:7px!important}
-.quiz-ui .question-meta-top{padding-bottom:7px!important}
-.quiz-ui .mode-label{font-size:11px!important}
-.quiz-ui .answered-counter{display:none!important}
-.quiz-ui .section-rail-wrap{display:none!important}
-.quiz-ui .quiz-progress{margin-top:7px!important}
-.quiz-ui .quiz-body{width:min(920px,calc(100% - 28px))!important;padding:16px 0 112px!important}
-.quiz-ui .question-card-ui{box-shadow:0 8px 30px rgba(0,0,0,.12)!important}
-.quiz-ui .q-info-row{margin-bottom:10px!important}
-.quiz-ui .q-source{display:none!important}
-.quiz-ui .q-tags{display:none!important}
-.quiz-ui .question-number{margin-bottom:8px!important;font-size:11px!important}
-.quiz-ui .question-text{font-size:clamp(19px,2vw,25px)!important;line-height:1.48!important}
-.quiz-ui .question-hindi{margin-top:10px!important}
-.quiz-ui .options-ui{margin-top:15px!important;gap:8px!important}
-.quiz-ui .option-ui{padding:10px 11px!important;border-radius:12px!important;box-shadow:none!important}
-.quiz-ui .option-ui:hover{transform:none!important;box-shadow:none!important}
-.quiz-ui .option-letter{width:36px!important;height:36px!important;border-radius:9px!important}
-.quiz-ui .bookmark-row{margin-top:10px!important}
-.quiz-ui .bottom-controls{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:120!important;width:100%!important;margin:0!important;padding:10px max(12px,calc((100vw - 920px)/2)) calc(10px + env(safe-area-inset-bottom))!important;background:color-mix(in srgb,var(--world-bg,#0b1119) 96%,transparent)!important;border-top:1px solid var(--world-line,rgba(255,255,255,.1))!important;backdrop-filter:blur(14px)!important;box-shadow:0 -8px 28px rgba(0,0,0,.16)!important;grid-template-columns:1fr auto 1fr!important}
-.quiz-ui .bottom-btn{min-height:44px!important;padding:10px 14px!important;border-radius:11px!important;box-shadow:none!important}
-.quiz-ui .bottom-btn:hover{transform:none!important}
-.quiz-ui .bottom-btn.submit-btn{background:var(--world-accent,#6d9dcc)!important;color:#fff!important;box-shadow:none!important}
-.quiz-ui #prev{justify-self:start;min-width:118px}
-.quiz-ui #next{justify-self:end;min-width:118px}
-.quiz-ui #submit{min-width:150px}
-/* Compact theme-specific quiz surfaces: each theme follows the same study-first layout. */
-body[data-nx-theme="midnight"] .quiz-ui{background:#0b1119!important;color:#eef3f8!important}
-body[data-nx-theme="midnight"] .quiz-ui .question-card-ui{background:#121b27!important;border-color:#2a3a4c!important}
-body[data-nx-theme="midnight"] .quiz-ui .option-ui{background:#172331!important;border-color:#2a3949!important}
-body[data-nx-theme="midnight"] .quiz-ui .option-ui.selected{background:#1b3045!important;border-color:#6d9dcc!important}
-body[data-nx-theme="dark"] .quiz-ui{background:#16191d!important;color:#f1f3f5!important}
-body[data-nx-theme="dark"] .quiz-ui .question-card-ui{background:#20252a!important;border-color:#3b434b!important}
-body[data-nx-theme="dark"] .quiz-ui .option-ui{background:#262c31!important;border-color:#3b434b!important}
-body[data-nx-theme="dark"] .quiz-ui .option-ui.selected{background:#30373e!important;border-color:#aeb7c2!important}
-body[data-nx-theme="arghya"] .quiz-ui{background:#11110f!important;color:#f5f0e4!important}
-body[data-nx-theme="arghya"] .quiz-ui .question-card-ui{background:#191916!important;border-color:rgba(215,179,91,.24)!important}
-body[data-nx-theme="arghya"] .quiz-ui .option-ui{background:#211f19!important;border-color:rgba(215,179,91,.18)!important}
-body[data-nx-theme="arghya"] .quiz-ui .option-ui.selected{background:#302a1c!important;border-color:#d7b35b!important}
-body[data-nx-theme="arghya"] .quiz-ui .question-number{color:#d7b35b!important}
-@media(max-width:800px){
-  .quiz-ui .quiz-body{width:calc(100% - 14px)!important;padding-bottom:105px!important}
-  .quiz-ui .quiz-mainbar{grid-template-columns:auto minmax(0,1fr) auto!important}
-  .quiz-ui .quiz-top-actions{grid-column:auto!important}
-  .quiz-ui .quiz-action{flex:initial!important}
-  .quiz-ui .quiz-action.nav-primary{font-size:0!important;width:42px!important;padding:9px!important}
-  .quiz-ui .quiz-action.nav-primary:after{content:'☷';font-size:18px}
-  .quiz-ui .pause-btn{font-size:0!important;width:42px!important;padding:9px!important}
-  .quiz-ui .pause-btn:after{content:'Ⅱ';font-size:17px}
-  .quiz-ui .quiz-heading h1{font-size:13px!important}
-  .quiz-ui .quiz-heading .quiz-summary{display:none!important}
-  .quiz-ui .quiz-subbar{align-items:center!important}
-  .quiz-ui .timer{font-size:11px!important;padding:6px 9px!important}
-  .quiz-ui .question-card-ui{padding:15px!important;border-radius:15px!important}
-  .quiz-ui .question-text{font-size:18px!important;line-height:1.5!important}
-  .quiz-ui .option-copy{font-size:14px!important}
-  .quiz-ui .bottom-controls{grid-template-columns:1fr 1fr!important;gap:7px!important;padding:8px 9px calc(8px + env(safe-area-inset-bottom))!important}
-  .quiz-ui #prev,.quiz-ui #next,.quiz-ui #submit{min-width:0!important;width:100%!important}
-  .quiz-ui #submit{grid-column:1/-1;grid-row:1}
-  .quiz-ui #prev{grid-column:1;grid-row:2}
-  .quiz-ui #next{grid-column:2;grid-row:2}
-}
 </style>
 <script>
 /* ===== WORKING PROGRESS / BOOKMARK / THEME CONTROLS ===== */
 (function(){
   const THEME_KEY='bpsc_nexus_theme';
-  const valid=['midnight','dark','arghya'];
-  const THEME_COPY={
-    classic:{gateway:'STUDY DESK',archive:'BPSC ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'STUDY PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
-    midnight:{gateway:'MIDNIGHT STUDY',archive:'EXAM ARCHIVE',practice:'FOCUSED PRACTICE',sectional:'SECTIONAL PRACTICE',flt:'MOCK EXAM',progress:'PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
-    ivy:{gateway:'QUIET STUDY',archive:'BPSC ARCHIVE',practice:'DAILY PRACTICE',sectional:'FOCUSED PRACTICE',flt:'FULL LENGTH TEST',progress:'STUDY PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
-    library:{gateway:'THE STUDY LIBRARY',archive:'EXAM ARCHIVE',practice:'KNOWLEDGE PRACTICE',sectional:'SUBJECT PRACTICE',flt:'MOCK EXAM',progress:'STUDY RECORD',bookmarks:'BOOKMARKS',niva:'STUDY COMPANION'},
-    dark:{gateway:'FOCUS MODE',archive:'BPSC ARCHIVE',practice:'PRACTICE',sectional:'SUBJECT TESTS',flt:'FULL LENGTH TEST',progress:'PERFORMANCE',bookmarks:'BOOKMARKS',niva:'STUDY COMPANION'},
-    arghya:{gateway:'BPSC NEXUS',archive:'BPSC ARCHIVE',practice:'PRELIMS PRACTICE',sectional:'SUBJECT TESTS',flt:'FULL LENGTH TEST',progress:'PREPARATION',bookmarks:'KNOWLEDGE VAULT',niva:'STUDY COMPANION'}
-  };
+  const valid=['classic','midnight','ivy','dark','arghya'];
+  const THEME_COPY={classic:{gateway:'STUDY DESK',archive:'EXAM ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'PROGRESS',bookmarks:'BOOKMARKS',niva:'STUDY ASSISTANT'},midnight:{gateway:'MIDNIGHT STUDY',archive:'EXAM ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'PROGRESS',bookmarks:'BOOKMARKS',niva:'STUDY ASSISTANT'},ivy:{gateway:'IVY STUDY',archive:'EXAM ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'PROGRESS',bookmarks:'BOOKMARKS',niva:'STUDY ASSISTANT'},dark:{gateway:'FOCUS DESK',archive:'EXAM ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'PROGRESS',bookmarks:'BOOKMARKS',niva:'STUDY ASSISTANT'},arghya:{gateway:'ARGHYA',archive:'EXAM ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'PROGRESS',bookmarks:'BOOKMARKS',niva:'STUDY ASSISTANT'}};
   function syncThemeCopy(name){
-    const c=THEME_COPY[name]||THEME_COPY.nebula;
+    const c=THEME_COPY[name]||THEME_COPY.classic;
     const hero=document.querySelector('.nx-hero .nx-kicker'); if(hero) hero.innerHTML=c.gateway+' <b>•</b> BPSC NEXUS';
     const themeBtn=document.getElementById('themeBtn'); if(themeBtn) themeBtn.title='Change theme • '+name;
     const globalBtn=document.getElementById('globalThemeBtn'); if(globalBtn) globalBtn.title='Change theme • '+name;
@@ -1755,8 +1583,6 @@ body[data-nx-theme="arghya"] .quiz-ui .question-number{color:#d7b35b!important}
   document.querySelector('.nx-bookmarks')?.addEventListener('click',()=>showUtility('bookmarks'));
   document.querySelectorAll('.nx-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeOverlay(o.id)}));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeOverlay('themeModal');closeOverlay('utilityModal')}});
-  const saved=localStorage.getItem(THEME_KEY);
-  applyTheme(valid.includes(saved)?saved:'midnight');
 })();
 </script>
 
@@ -1919,7 +1745,7 @@ function openInstitute(id){
     document.getElementById('question').innerHTML=`<div class="question-number">Question ${i}</div><div class="question-text">${esc(q.en||'')}</div>`;
     let oh='';for(const l of ['A','B','C','D','E']){if(!q.opts?.[l])continue;let cls='option-ui '+(val===l?'selected':'');if(mode==='practice'&&val&&q.answer){if(l===q.answer)cls+=' correct';else if(l===val&&l!==q.answer)cls+=' wrong'}oh+=`<button type="button" class="${cls}" data-answer="${l}"><span class="option-letter">${l}</span><div class="option-copy">${esc(q.opts[l])}</div></button>`}
     document.getElementById('opts').innerHTML=oh;document.querySelectorAll('.option-ui').forEach(b=>b.onclick=()=>choose(b.dataset.answer));
-    let f='';if(mode==='practice'&&val){if(q.bonus)f=`<div class="feedback-ui good"><b>✓ BONUS / EXCLUDED FROM SCORING</b><div class="explain"><b>Source Solution</b><br>${esc(q.ex_en||'The supplied solution identifies this item as a bonus/no-option-correct question.')}</div><div class="niva-inline-wrap"><button type="button" class="niva-ask-btn" data-niva-qid="${qid}">✦ Ask Niva about this question</button></div></div>`;else if(!q.answer)f=`<div class="feedback-ui good"><b>◌ SOURCE KEY UNAVAILABLE</b><div class="explain"><b>Accuracy safeguard</b><br>The supplied source PDF does not provide a machine-readable keyed answer for this question. It is excluded from scoring rather than being guessed.</div><div class="niva-inline-wrap"><button type="button" class="niva-ask-btn" data-niva-qid="${qid}">✦ Ask Niva about this question</button></div></div>`;else{const ok=val===q.answer;f=`<div class="feedback-ui ${ok?'good':'bad'}"><b>${ok?'✓ Correct Answer':'✕ Incorrect Answer'}</b><div style="margin-top:7px"><strong>Correct Answer: ${esc(q.answer)}</strong></div>${q.ex_en?`<div class="explain"><b>Source Solution &amp; Explanation</b><br>${esc(q.ex_en)}</div>`:''}<div class="niva-inline-wrap"><button type="button" class="niva-ask-btn" data-niva-qid="${qid}">✦ Ask Niva about this question</button></div></div>`}}
+    let f='';if(mode==='practice'&&val){if(q.bonus)f=`<div class="feedback-ui good"><b>✓ BONUS / EXCLUDED FROM SCORING</b><div class="explain"><b>Source Solution</b><br>${esc(q.ex_en||'The supplied solution identifies this item as a bonus/no-option-correct question.')}</div></div>`;else if(!q.answer)f=`<div class="feedback-ui good"><b>◌ SOURCE KEY UNAVAILABLE</b><div class="explain"><b>Accuracy safeguard</b><br>The supplied source PDF does not provide a machine-readable keyed answer for this question. It is excluded from scoring rather than being guessed.</div></div>`;else{const ok=val===q.answer;f=`<div class="feedback-ui ${ok?'good':'bad'}"><b>${ok?'✓ Correct Answer':'✕ Incorrect Answer'}</b><div style="margin-top:7px"><strong>Correct Answer: ${esc(q.answer)}</strong></div>${q.ex_en?`<div class="explain"><b>Source Solution &amp; Explanation</b><br>${esc(q.ex_en)}</div>`:''}</div>`}}
     document.getElementById('feedback').innerHTML=f;renderBookmark();renderPalette();document.getElementById('prev').disabled=i===1;document.getElementById('next').disabled=i===total;
   };
 
@@ -2088,14 +1914,14 @@ body[data-nx-theme="gaming"] .quiz-ui *{animation-duration:.01ms!important}
 (function(){
   function activeTheme(){return document.body.dataset.nxTheme||'midnight'}
   function applyAccent(){
-    const map={midnight:'#6d9dcc',dark:'#aeb7c2',arghya:'#d7b35b'};
+    const map={classic:'#2463a8',midnight:'#5db5f7',ivy:'#28704b',dark:'#d3a85c',arghya:'#d5b15b'};
     const accent=map[activeTheme()]||map.midnight;
     document.documentElement.style.setProperty('--theme-accent',accent);
     const app=document.getElementById('app');if(app){app.style.setProperty('--accent',accent,'important');app.style.setProperty('--accent-soft',accent+'2b','important')}
   }
   function syncThemeButton(){
     const b=document.getElementById('globalThemeBtn');if(!b)return;
-    const names={midnight:'MIDNIGHT',dark:'DARK',arghya:'ARGHYA'};
+    const names={classic:'CLASSIC',midnight:'MIDNIGHT',ivy:'IVY',dark:'DARK',arghya:'ARGHYA'};
     const label=b.querySelector('.gt-label');if(label)label.textContent=innerWidth<601?'':'Theme • '+names[activeTheme()];
   }
   function decorate(){applyAccent();syncThemeButton()}
@@ -2121,7 +1947,7 @@ const TOKEN_KEY='BPN_SERVER_SESSION_TOKEN_V1';
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let token=sessionStorage.getItem(TOKEN_KEY)||localStorage.getItem(TOKEN_KEY)||'';
-async function api(path,opt={}){const headers={'Content-Type':'application/json',...(opt.headers||{})};if(token)headers.Authorization='Bearer '+token;const r=await fetch(API+path,{...opt,headers,credentials:'omit'});let d={};try{d=await r.json()}catch{}if(!r.ok)throw Error(d.error||'Request failed');return d}
+async function api(path,opt={}){const headers={'Content-Type':'application/json',...(opt.headers||{})};if(token)headers.Authorization='Bearer '+token;const r=await fetch(API+path,{...opt,headers,credentials:'include'});let d={};try{d=await r.json()}catch{}if(!r.ok)throw Error(d.error||'Request failed');return d}
 function setStudentMsg(t,ok=false){$('bpnStudentMsg').textContent=t||'';$('bpnStudentMsg').style.color=ok?'#67e6b0':'#ff8295'}
 function saveToken(t){token=t;sessionStorage.setItem(TOKEN_KEY,t);localStorage.setItem(TOKEN_KEY,t)}
 function clearToken(){token='';sessionStorage.removeItem(TOKEN_KEY);localStorage.removeItem(TOKEN_KEY)}
@@ -2133,7 +1959,7 @@ $('bpnAdminClose').onclick=async()=>{try{await api('/logout',{method:'POST'})}ca
 async function loadStudents(){const d=await api('/admin/students');$('bpnStudentRows').innerHTML=(d.students||[]).map(a=>`<tr><td><b>${esc(a.studentId)}</b></td><td>${esc(a.name)}</td><td>${esc(a.password)}</td><td>${esc(a.expiry||'No expiry')}</td><td>${esc(a.status)}</td><td>${esc(a.lastLogin||'Never')}</td><td><button data-toggle="${encodeURIComponent(a.studentId)}">${a.status==='blocked'?'Activate':'Block'}</button></td></tr>`).join('')||'<tr><td colspan="7">No student accounts yet.</td></tr>';
  document.querySelectorAll('[data-toggle]').forEach(b=>b.onclick=async()=>{try{await api('/admin/students/'+b.dataset.toggle+'/toggle',{method:'POST'});await loadStudents()}catch(e){alert(e.message)}})}
 $('bpnCreate').onclick=async()=>{const msg=$('bpnAdminMsg');msg.textContent='';$('bpnCreated').style.display='none';try{const d=await api('/admin/students',{method:'POST',body:JSON.stringify({name:$('bpnNewName').value.trim(),expiry:$('bpnNewExpiry').value,studentId:$('bpnNewId').value.trim()})});$('bpnCreated').style.display='block';$('bpnCreated').innerHTML='<b>Account created successfully.</b><br>Student ID: <strong>'+esc(d.studentId)+'</strong><br>Password: <strong>'+esc(d.password)+'</strong>';$('bpnNewName').value='';$('bpnNewExpiry').value='';$('bpnNewId').value='';await loadStudents()}catch(e){msg.textContent=e.message}}
-(async()=>{if(!token){showGate();return}try{const d=await api('/session');if(d.authenticated&&d.role==='student')showApp();else if(d.authenticated&&d.role==='admin'){showGate()}else{clearToken();showGate()}}catch{clearToken();showGate()}})();
+(async()=>{try{const d=await api('/session');if(d.authenticated&&d.role==='student'){window.dispatchEvent(new CustomEvent('bpn-auth-ready',{detail:{token:token||'',studentId:d.studentId||''}}));showApp();return}if(d.authenticated&&d.role==='admin'){showGate();return}clearToken();showGate()}catch{clearToken();showGate()}})();
 })();
 </script><script id="bpnCloudPersistenceScript">
 (function(){
@@ -2143,13 +1969,13 @@ const TOKEN_KEY='BPN_SERVER_SESSION_TOKEN_V1';
 const LAST_STUDENT_KEY='BPN_LAST_STUDENT_ID_V1';
 let token=''; let studentId=''; let ready=false; let restoring=false; let timer=0;
 try{token=sessionStorage.getItem(TOKEN_KEY)||localStorage.getItem(TOKEN_KEY)||''}catch(e){}
-const excluded=new Set([TOKEN_KEY,'BPN_SERVER_SESSION_TOKEN_V2','BPN_SERVER_SESSION_TOKEN_V1',LAST_STUDENT_KEY]);
+const excluded=new Set([TOKEN_KEY,'BPN_SERVER_SESSION_TOKEN_V2','BPN_SERVER_SESSION_TOKEN_V1']);
 function headers(){const h={'Content-Type':'application/json'};if(token)h.Authorization='Bearer '+token;return h}
 function snapshot(){const out={};try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&!excluded.has(k)&&!k.startsWith('BPN_CLOUD_'))out[k]=localStorage.getItem(k)}}catch(e){}return out}
-async function push(){if(!ready||restoring||!token)return;try{await fetch(API+'/student/state',{method:'PUT',headers:headers(),credentials:'omit',mode:'cors',body:JSON.stringify({state:snapshot()})})}catch(e){}}
+async function push(){if(!ready||restoring)return;try{await fetch(API+'/student/state',{method:'PUT',headers:headers(),credentials:'include',mode:'cors',body:JSON.stringify({state:snapshot()})})}catch(e){}}
 function schedule(){clearTimeout(timer);timer=setTimeout(push,700)}
 function wrap(){if(wrap.done)return;wrap.done=true;const os=localStorage.setItem.bind(localStorage),or=localStorage.removeItem.bind(localStorage),oc=localStorage.clear.bind(localStorage);localStorage.setItem=function(k,v){os(k,v);if(!restoring)schedule()};localStorage.removeItem=function(k){or(k);if(!restoring)schedule()};localStorage.clear=function(){oc();if(!restoring)schedule()}}
-async function restoreForStudent(id){studentId=id||'';if(!studentId||!token)return;const previousStudent=(()=>{try{return localStorage.getItem(LAST_STUDENT_KEY)||''}catch(e){return ''}})();try{const r=await fetch(API+'/student/state',{headers:headers(),credentials:'omit',mode:'cors',cache:'no-store'});if(!r.ok)return;const d=await r.json();const state=d.state&&typeof d.state==='object'?d.state:{};const keys=Object.keys(state);restoring=true;if(keys.length){for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&!excluded.has(k)&&!k.startsWith('BPN_CLOUD_')){try{localStorage.removeItem(k)}catch(e){}}}for(const [k,v] of Object.entries(state)){try{localStorage.setItem(k,String(v??''))}catch(e){}}}else if(previousStudent!==studentId){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&!excluded.has(k)&&!k.startsWith('BPN_CLOUD_')){try{localStorage.removeItem(k)}catch(e){}}}}restoring=false;try{localStorage.setItem(LAST_STUDENT_KEY,studentId)}catch(e){}ready=true;if(!keys.length&&previousStudent===studentId)await push()}catch(e){restoring=false}}
+async function restoreForStudent(id){studentId=id||'';if(!studentId)return;const previousStudent=(()=>{try{return localStorage.getItem(LAST_STUDENT_KEY)||''}catch(e){return ''}})();try{const r=await fetch(API+'/student/state',{headers:headers(),credentials:'include',mode:'cors',cache:'no-store'});if(!r.ok)return;const d=await r.json();const state=d.state&&typeof d.state==='object'?d.state:{};const keys=Object.keys(state);restoring=true;if(previousStudent!==studentId){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&!excluded.has(k)&&!k.startsWith('BPN_CLOUD_')){try{localStorage.removeItem(k)}catch(e){}}}}else if(keys.length){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&!excluded.has(k)&&!k.startsWith('BPN_CLOUD_')){try{localStorage.removeItem(k)}catch(e){}}}for(const [k,v] of Object.entries(state)){try{localStorage.setItem(k,String(v??''))}catch(e){}}}restoring=false;try{localStorage.setItem(LAST_STUDENT_KEY,studentId)}catch(e){}ready=true;if(!keys.length&&previousStudent===studentId)await push()}catch(e){restoring=false}}
 async function authReady(e){if(e&&e.detail){token=e.detail.token||token;studentId=e.detail.studentId||studentId}try{const sid=studentId||localStorage.getItem(LAST_STUDENT_KEY)||'';if(sid)await restoreForStudent(sid)}catch(err){} }
 wrap();
 window.bpnCloudSync=push;
@@ -2159,33 +1985,10 @@ window.addEventListener('pagehide',push);
 setInterval(push,10000);
 try{const raw=localStorage.getItem(LAST_STUDENT_KEY);if(raw&&token)restoreForStudent(raw)}catch(e){}
 })();
-</script><button id="bpnServerLogoutBtn" type="button">↪ LOGOUT</button><script id="bpnServerLogoutScript">(function(){const b=document.getElementById("bpnServerLogoutBtn");if(!b)return;b.addEventListener("click",async function(){b.disabled=true;b.textContent="Logging out…";try{if(window.bpnResumeTest&&typeof window.bpnResumeTest.save==='function')window.bpnResumeTest.save();if(typeof window.bpnCloudSync==='function')await window.bpnCloudSync();const t=sessionStorage.getItem("BPN_SERVER_SESSION_TOKEN_V1")||localStorage.getItem("BPN_SERVER_SESSION_TOKEN_V1")||"";await fetch("https://bpsc-prelims-nexus-auth.onrender.com/api/logout",{method:"POST",credentials:"omit",mode:"cors",headers:{"Content-Type":"application/json",...(t?{"Authorization":"Bearer "+t}: {})}});sessionStorage.removeItem("BPN_SERVER_SESSION_TOKEN_V1");localStorage.removeItem("BPN_SERVER_SESSION_TOKEN_V1")}finally{location.href="/"}})})();</script><div id="bpnPlannerModal"><div class="bpn-planner"><div class="bpn-planner-head"><div><h2>📅 Day Planner</h2><p>PLAN THE TESTS YOU WANT TO ATTEMPT — TODAY OR ANY FUTURE DAY</p></div><button class="bpn-planner-close" id="bpnPlannerClose">Close</button></div><form class="bpn-planner-form" id="bpnPlannerForm"><input id="bpnPlanDate" type="date" required><input id="bpnPlanTitle" placeholder="Plan title — e.g. Complete FLT 05" required><input id="bpnPlanTest" placeholder="Test / Section (optional)"><input id="bpnPlanNotes" placeholder="Notes (optional)"><button class="bpn-planner-add" type="submit">+ ADD PLAN</button></form><div class="bpn-planner-msg" id="bpnPlannerMsg"></div><div id="bpnPlannerList"></div></div></div><script id="bpn-day-planner-script">
+</script><button id="bpnServerLogoutBtn" type="button">↪ LOGOUT</button><script id="bpnServerLogoutScript">(function(){const b=document.getElementById("bpnServerLogoutBtn");if(!b)return;b.addEventListener("click",async function(){b.disabled=true;b.textContent="Logging out…";try{const t=sessionStorage.getItem("BPN_SERVER_SESSION_TOKEN_V1")||localStorage.getItem("BPN_SERVER_SESSION_TOKEN_V1")||"";await fetch("https://bpsc-prelims-nexus-auth.onrender.com/api/logout",{method:"POST",credentials:"omit",mode:"cors",headers:{"Content-Type":"application/json",...(t?{"Authorization":"Bearer "+t}: {})}});sessionStorage.removeItem("BPN_SERVER_SESSION_TOKEN_V1");localStorage.removeItem("BPN_SERVER_SESSION_TOKEN_V1")}finally{location.href="/"}})})();</script><div id="bpnPlannerModal"><div class="bpn-planner"><div class="bpn-planner-head"><div><h2>📅 Day Planner</h2><p>PLAN THE TESTS YOU WANT TO ATTEMPT — TODAY OR ANY FUTURE DAY</p></div><button class="bpn-planner-close" id="bpnPlannerClose">Close</button></div><form class="bpn-planner-form" id="bpnPlannerForm"><input id="bpnPlanDate" type="date" required><input id="bpnPlanTitle" placeholder="Plan title — e.g. Complete FLT 05" required><input id="bpnPlanTest" placeholder="Test / Section (optional)"><input id="bpnPlanNotes" placeholder="Notes (optional)"><button class="bpn-planner-add" type="submit">+ ADD PLAN</button></form><div class="bpn-planner-msg" id="bpnPlannerMsg"></div><div id="bpnPlannerList"></div></div></div><script id="bpn-day-planner-script">
 (function(){'use strict';const API='https://bpsc-prelims-nexus-auth.onrender.com/api';const TOKEN_KEY='BPN_SERVER_SESSION_TOKEN_V1';const $=id=>document.getElementById(id);const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let token='';try{token=sessionStorage.getItem(TOKEN_KEY)||''}catch(e){}function authHeaders(){const h={'Content-Type':'application/json'};if(token)h.Authorization='Bearer '+token;return h}async function api(path,opt={}){const r=await fetch(API+path,{method:opt.method||'GET',body:opt.body,headers:authHeaders(),credentials:'include',mode:'cors',cache:'no-store'});let d={};try{d=await r.json()}catch(e){}if(!r.ok)throw Error(d.error||('Server returned HTTP '+r.status));return d}function localDate(){const d=new Date();return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10)}function niceDate(x){return new Date(x+'T00:00:00').toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'short',year:'numeric'})}function setMsg(x,ok){const e=$('bpnPlannerMsg');if(e){e.textContent=x||'';e.style.color=ok?'#67e6b0':'#ff8295'}}function openPlanner(){const m=$('bpnPlannerModal');if(m)m.classList.add('show');const d=$('bpnPlanDate');if(d&&!d.value)d.value=localDate();loadPlans()}function closePlanner(){$('bpnPlannerModal')?.classList.remove('show')}async function loadPlans(){try{const d=await api('/planner');const items=d.items||[];const list=$('bpnPlannerList');if(!list)return;if(!items.length){list.innerHTML='<div class="bpn-planner-empty">No plans yet. Add the tests you want to attempt today or on any future date.</div>';return}const groups={};items.forEach(x=>(groups[String(x.planned_date).slice(0,10)]??=[]).push(x));list.innerHTML=Object.keys(groups).sort().map(date=>'<section class="bpn-plan-day"><div class="bpn-plan-day-head"><b>'+niceDate(date)+'</b><span>'+groups[date].length+' plan'+(groups[date].length===1?'':'s')+'</span></div>'+groups[date].map(x=>'<div class="bpn-plan-item '+(x.completed?'bpn-plan-done':'')+'"><button class="bpn-plan-check" data-plan-toggle="'+x.id+'">'+(x.completed?'✓':'')+'</button><div><div class="bpn-plan-title">'+esc(x.title)+'</div>'+(x.test_name?'<div class="bpn-plan-test">'+esc(x.test_name)+'</div>':'')+(x.notes?'<div class="bpn-plan-notes">'+esc(x.notes)+'</div>':'')+'</div><div class="bpn-plan-actions"><button data-plan-delete="'+x.id+'">Delete</button></div></div>').join('')+'</section>').join('');list.querySelectorAll('[data-plan-toggle]').forEach(b=>b.onclick=async()=>{try{await api('/planner/'+b.dataset.planToggle,{method:'PATCH'});loadPlans()}catch(e){setMsg(e.message)}});list.querySelectorAll('[data-plan-delete]').forEach(b=>b.onclick=async()=>{if(!confirm('Delete this planner item?'))return;try{await api('/planner/'+b.dataset.planDelete,{method:'DELETE'});loadPlans()}catch(e){setMsg(e.message)}})}catch(e){setMsg(e.message)}}function init(){const b=document.querySelector('.nx-planner');if(b)b.addEventListener('click',openPlanner);$('bpnPlannerClose')?.addEventListener('click',closePlanner);$('bpnPlannerForm')?.addEventListener('submit',async e=>{e.preventDefault();setMsg('');try{await api('/planner',{method:'POST',body:JSON.stringify({plannedDate:$('bpnPlanDate').value,title:$('bpnPlanTitle').value.trim(),testName:$('bpnPlanTest').value.trim(),notes:$('bpnPlanNotes').value.trim()})});$('bpnPlanTitle').value='';$('bpnPlanTest').value='';$('bpnPlanNotes').value='';setMsg('Plan added successfully.',true);loadPlans()}catch(e){setMsg(e.message)}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();window.bpnOpenPlanner=openPlanner})();
-</script>
-<div id="bpnNivaModal" aria-hidden="true"><div class="bpn-niva-card"><div class="bpn-niva-head"><div><div class="bpn-niva-kicker">BPSC NEXUS • STUDY ASSISTANT</div><h2>✦ Ask Niva</h2><p>Niva has the current question and its supplied explanation as context.</p></div><button class="bpn-niva-close" id="bpnNivaClose" type="button">×</button></div><div class="bpn-niva-context"><div class="label">CURRENT QUESTION</div><div class="bpn-niva-question" id="bpnNivaQuestion"></div><div class="bpn-niva-explain" id="bpnNivaExplanation"></div></div><textarea class="bpn-niva-input" id="bpnNivaInput" placeholder="Ask Niva anything about this question…"></textarea><div class="bpn-niva-actions"><button class="bpn-niva-close" id="bpnNivaCancel" type="button">Cancel</button><button class="bpn-niva-send" id="bpnNivaSend" type="button">ASK NIVA →</button></div><div class="bpn-niva-status" id="bpnNivaStatus"></div><div class="bpn-niva-answer" id="bpnNivaAnswer"></div></div></div>
-<script id="bpn-niva-ask-script">
-(function(){'use strict';
-const API='https://bpsc-prelims-nexus-auth.onrender.com/api';
-const TOKEN_KEY='BPN_SERVER_SESSION_TOKEN_V1';const $=id=>document.getElementById(id);const esc=v=>String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));let current=null;
-function getToken(){try{return sessionStorage.getItem(TOKEN_KEY)||localStorage.getItem(TOKEN_KEY)||''}catch(e){return ''}}
-function bankForCurrent(){try{return (typeof activeData!=='undefined'?activeData:(typeof DATA!=='undefined'?DATA:{}))||{}}catch(e){return {}}}
-function openNiva(qid){const bank=bankForCurrent(),q=bank[qid]||bank[String(qid)];if(!q)return;current={qid,q};$('bpnNivaQuestion').textContent=q.en||q.question||'';const exp=[q.ex_en,q.ex_hi].filter(Boolean).join('\n\n');$('bpnNivaExplanation').textContent=exp?'Supplied explanation:\n'+exp:'No supplied explanation is available for this question.';$('bpnNivaInput').value='Please explain this question more clearly, step by step. Also explain why the correct answer is correct and why the other options are wrong.';$('bpnNivaAnswer').textContent='';$('bpnNivaStatus').textContent='';$('bpnNivaModal').classList.add('show');$('bpnNivaModal').setAttribute('aria-hidden','false');setTimeout(()=>$('bpnNivaInput').focus(),80)}
-function closeNiva(){$('bpnNivaModal')?.classList.remove('show');$('bpnNivaModal')?.setAttribute('aria-hidden','true')}
-async function ask(){if(!current)return;const msg=$('bpnNivaInput').value.trim();if(!msg)return;$('bpnNivaSend').disabled=true;$('bpnNivaStatus').textContent='Niva is thinking…';$('bpnNivaAnswer').textContent='';try{const t=getToken();const q=current.q||{};const h={'Content-Type':'application/json'};if(t)h.Authorization='Bearer '+t;const r=await fetch(API+'/niva/ask',{method:'POST',headers:h,credentials:'omit',mode:'cors',body:JSON.stringify({message:msg,question:q.en||q.question||'',options:q.opts||{},correctAnswer:q.answer||'',explanation:q.ex_en||'',source:q.source_exam||q.source||'BPSC Prelims Nexus'})});let d={};try{d=await r.json()}catch(e){}if(!r.ok)throw Error(d.error||'Niva could not answer right now.');$('bpnNivaAnswer').textContent=d.answer||'Niva returned no answer.';$('bpnNivaStatus').textContent='Niva response';}catch(e){$('bpnNivaStatus').textContent=e.message||'Unable to connect to Niva.'}finally{$('bpnNivaSend').disabled=false}}
-document.addEventListener('click',e=>{const b=e.target.closest?.('[data-niva-qid]');if(b)openNiva(b.dataset.nivaQid)});$('bpnNivaClose')?.addEventListener('click',closeNiva);$('bpnNivaCancel')?.addEventListener('click',closeNiva);$('bpnNivaSend')?.addEventListener('click',ask);$('bpnNivaModal')?.addEventListener('click',e=>{if(e.target.id==='bpnNivaModal')closeNiva()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNiva()});window.bpnOpenNiva=openNiva;
-})();
-</script>
-</body>
-<script id="bpnPersistentTestHistory">
-(function(){
-'use strict';
-const KEY='BPN_TEST_HISTORY_V1';
-function record(){try{if(typeof quizIds==='undefined'||!quizIds.length||typeof activeData==='undefined')return;let correct=0,wrong=0,unattempted=0,score=0;quizIds.forEach(qid=>{const q=activeData[qid]||{},a=(answers||{})[qid];if(!a||a==='E'){unattempted++;return}if(q.answer&&a===q.answer){correct++;score+=1}else if(q.answer){wrong++;score-=1/3}});const attempted=correct+wrong,accuracy=attempted?correct/attempted*100:0;const meta=typeof activeTestMeta!=='undefined'&&activeTestMeta?activeTestMeta:{};let arr=[];try{arr=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}if(!Array.isArray(arr))arr=[];arr.unshift({id:String(Date.now()),selectedInstitute:typeof selectedInstitute!=='undefined'?selectedInstitute:'',selectedTest:typeof selectedTest!=='undefined'?selectedTest:'',testName:meta.name||'Test',mode:typeof mode!=='undefined'?mode:'practice',total:quizIds.length,correct,wrong,unattempted,attempted,accuracy:Number(accuracy.toFixed(1)),score:Number(score.toFixed(2)),completedAt:Date.now()});localStorage.setItem(KEY,JSON.stringify(arr.slice(0,100)))}catch(e){}}
-function install(){const old=window.submitTest;if(typeof old!=='function'||old.__bpnHistoryWrapped)return;const fn=function(){if(!submitted)record();return old.apply(this,arguments)};fn.__bpnHistoryWrapped=true;window.submitTest=fn}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(install,50));else setTimeout(install,50);
-})();
-</script>
-
+</script></body>
+<style id="bpnResumeFrontStyles">.bpn-resume-front{display:none;margin:18px auto 24px;width:min(920px,calc(100% - 32px));border:1px solid rgba(99,194,255,.25);border-radius:22px;background:linear-gradient(135deg,rgba(17,31,49,.97),rgba(6,13,22,.98));box-shadow:0 18px 55px rgba(0,0,0,.28),0 0 35px rgba(55,170,255,.08);padding:18px 20px;align-items:center;justify-content:space-between;gap:18px;position:relative;z-index:20}.bpn-resume-front.show{display:flex}.bpn-resume-front-copy{min-width:0}.bpn-resume-front-kicker{font-size:9px;letter-spacing:2.4px;color:#72cfff;font-weight:900;margin-bottom:5px}.bpn-resume-front-title{font-size:20px;font-weight:900;color:#fff;margin:0 0 5px}.bpn-resume-front-meta{font-size:12px;color:#9db0c5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bpn-resume-front-progress{height:5px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin-top:12px;max-width:430px}.bpn-resume-front-progress i{display:block;height:100%;background:linear-gradient(90deg,#35aaff,#8be6ff);border-radius:99px}.bpn-resume-front-btn{border:0;border-radius:13px;padding:13px 18px;background:linear-gradient(110deg,#35aaff,#8be6ff);color:#06101a;font-weight:950;cursor:pointer;white-space:nowrap;box-shadow:0 8px 25px rgba(53,170,255,.18)}@media(max-width:620px){.bpn-resume-front{align-items:stretch;flex-direction:column;padding:16px}.bpn-resume-front-btn{width:100%}.bpn-resume-front-title{font-size:18px}}</style>
 <script id="bpnResumeTestV2">
 (function(){
 'use strict';
@@ -2196,9 +1999,11 @@ const $=id=>document.getElementById(id);
 let restoring=false, modalOpen=false, pendingMode='practice';
 function token(){try{return sessionStorage.getItem(TOKEN_KEY)||localStorage.getItem(TOKEN_KEY)||''}catch(e){return ''}}
 function read(){try{const x=JSON.parse(localStorage.getItem(RESUME_KEY)||'null');return x&&x.quizIds&&x.quizIds.length?x:null}catch(e){return null}}
-function write(x){if(restoring)return;try{localStorage.setItem(RESUME_KEY,JSON.stringify(x))}catch(e){}}
-function clear(){try{localStorage.removeItem(RESUME_KEY)}catch(e){}}
+function write(x){if(restoring)return;try{localStorage.setItem(RESUME_KEY,JSON.stringify(x))}catch(e){}setTimeout(updateFrontCard,0)}
+function clear(){try{localStorage.removeItem(RESUME_KEY)}catch(e){}setTimeout(updateFrontCard,0)}
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function ensureFrontCard(){if($('bpnResumeFront'))return;const home=$('home');if(!home)return;const card=document.createElement('div');card.id='bpnResumeFront';card.className='bpn-resume-front';card.innerHTML=`<div class="bpn-resume-front-copy"><div class="bpn-resume-front-kicker">↻ SAVED TEST SESSION</div><div class="bpn-resume-front-title" id="bpnResumeFrontTitle">Resume your last test</div><div class="bpn-resume-front-meta" id="bpnResumeFrontMeta"></div><div class="bpn-resume-front-progress"><i id="bpnResumeFrontBar"></i></div></div><button type="button" class="bpn-resume-front-btn" id="bpnResumeFrontBtn">RESUME TEST →</button>`;const anchor=home.querySelector('.nx-stats')||home.querySelector('.front-stats');anchor?home.insertBefore(card,anchor):home.appendChild(card);$('bpnResumeFrontBtn').onclick=()=>{const s=read();if(s)resume(s)}}
+function updateFrontCard(){ensureFrontCard();const card=$('bpnResumeFront');if(!card)return;const s=read();const home=$('home');const visible=!!home&&!home.classList.contains('hidden');if(!s||!visible){card.classList.remove('show');return}const inst=(window.INSTITUTIONS||{})[s.selectedInstitute];const meta=s.activeTestMeta||((inst&&inst.tests||[]).find(t=>t.id===s.selectedTest)||{});const name=meta.name||s.selectedTest||'Your last test';const total=s.quizIds.length;const pos=Math.min(total,Math.max(1,Number(s.i)||1));$('bpnResumeFrontTitle').textContent=name;$('bpnResumeFrontMeta').textContent=`Question ${pos} of ${total} • ${s.mode==='exam'?'Exam Mode':'Practice Mode'}`;$('bpnResumeFrontBar').style.width=((pos/total)*100).toFixed(1)+'%';card.classList.add('show')}
 function isQuizVisible(){const a=$('app'),r=$('result');return !!(a&&!a.classList.contains('hidden')&&r&&r.classList.contains('hidden'))}
 function snapshot(){
   try{
@@ -2247,18 +2052,149 @@ function install(){
   setTimeout(()=>{cloud().then(()=>{const s=read();if(s&&!isQuizVisible())openModal(s)})},1200);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+setTimeout(updateFrontCard,1200);window.addEventListener('bpn-auth-ready',()=>setTimeout(updateFrontCard,1200));document.addEventListener('visibilitychange',()=>setTimeout(updateFrontCard,250));setInterval(updateFrontCard,2000);
 window.bpnResumeTest={save,clear,read,resume,open:openModal};
 })();
 </script>
 
-<script id="bpnFrontResumeScript">
+<style id="bpn-final-quiz-ux">
+/* FINAL STUDY-FIRST QUIZ UI */
+body:has(#app:not(.hidden)) #globalThemeBtn,
+body:has(#app:not(.hidden)) #bpnServerLogoutBtn,
+body:has(#app:not(.hidden)) .front-stats,
+body:has(#app:not(.hidden)) .front-footer-line{display:none!important}
+.quiz-ui .quiz-top{box-shadow:0 4px 18px rgba(0,0,0,.18)!important}
+.quiz-ui .quiz-top-inner{padding:8px 0 0!important}
+.quiz-ui .quiz-mainbar{grid-template-columns:auto minmax(0,1fr) auto!important;gap:10px!important}
+.quiz-ui .quiz-heading h1{font-size:15px!important}
+.quiz-ui .quiz-heading .quiz-summary{font-size:10px!important;margin-top:2px!important}
+.quiz-ui .quiz-summary span:first-child{display:none!important}
+.quiz-ui .quiz-top-actions{gap:6px!important}
+.quiz-ui .quiz-action{padding:8px 10px!important;border-radius:10px!important;font-size:11px!important;box-shadow:none!important}
+.quiz-ui .quiz-action:hover{transform:none!important;box-shadow:none!important}
+.quiz-ui .quiz-pause{border-color:color-mix(in srgb,var(--qaccent) 45%,var(--qline))!important}
+.quiz-ui .quiz-subbar{margin-top:6px!important;display:none!important}
+.quiz-ui .section-rail-wrap{display:none!important}
+.quiz-ui .quiz-progress{margin-top:7px!important;height:2px!important}
+.quiz-ui .quiz-progress i{animation:none!important;box-shadow:none!important;background:var(--qaccent)!important}
+.quiz-ui .quiz-body{padding:14px 0 94px!important;min-height:calc(100vh - 76px)!important}
+.quiz-ui .question-card-ui{padding:22px!important;border-radius:18px!important;box-shadow:0 14px 35px rgba(0,0,0,.18)!important}
+.quiz-ui .question-card-ui:before{display:none!important}
+.quiz-ui .q-info-row{margin-bottom:12px!important}
+.quiz-ui .q-tags,.quiz-ui .q-source{display:none!important}
+.quiz-ui .question-number{margin-bottom:8px!important;font-size:10px!important}
+.quiz-ui .question-text{font-size:clamp(19px,2vw,25px)!important;line-height:1.5!important}
+.quiz-ui .question-hindi{margin-top:12px!important;padding:12px 14px!important}
+.quiz-ui .options-ui{margin-top:18px!important;gap:8px!important}
+.quiz-ui .option-ui{padding:11px!important;border-radius:13px!important;box-shadow:none!important;transform:none!important}
+.quiz-ui .option-ui:after{display:none!important}
+.quiz-ui .option-ui:hover{transform:none!important;box-shadow:none!important}
+.quiz-ui .option-letter{width:36px!important;height:36px!important;border-radius:10px!important}
+.quiz-ui .option-copy{font-size:14px!important}
+.quiz-ui .bookmark-row{margin-top:10px!important}
+.quiz-ui .bottom-controls{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:120!important;width:100%!important;margin:0!important;padding:9px max(12px,env(safe-area-inset-right)) max(9px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))!important;background:color-mix(in srgb,var(--nx-bg) 96%,transparent)!important;border-top:1px solid var(--nx-line)!important;backdrop-filter:blur(14px)!important;grid-template-columns:1fr 1.05fr 1fr 1fr!important;gap:8px!important;box-shadow:0 -8px 24px rgba(0,0,0,.22)!important}
+.quiz-ui .bottom-btn{padding:10px 9px!important;border-radius:11px!important;font-size:12px!important;box-shadow:none!important;transform:none!important}
+.quiz-ui .bottom-btn:hover{transform:none!important;box-shadow:none!important}
+.quiz-ui .submit-btn{display:block!important;background:var(--nx-surface2)!important;color:var(--nx-text)!important;border-color:var(--nx-line)!important}
+.quiz-ui .bottom-controls:after{content:'Submit from Question Navigator';position:absolute;right:12px;bottom:58px;display:none}
+.quiz-ui .bottom-controls #next{background:var(--qaccent)!important;color:#07111a!important;border-color:transparent!important}
+.quiz-ui .bottom-controls #prev{background:var(--nx-surface)!important}
+@media(max-width:800px){
+ .quiz-ui .quiz-top-inner{padding:7px 9px 0!important}
+ .quiz-ui .quiz-mainbar{grid-template-columns:auto 1fr!important}
+ .quiz-ui .quiz-top-actions{grid-column:1/-1!important;display:grid!important;grid-template-columns:1fr 1fr 1.15fr!important}
+ .quiz-ui .quiz-action{width:100%!important}
+ .quiz-ui .quiz-body{width:calc(100% - 14px)!important;padding-top:10px!important}
+ .quiz-ui .question-card-ui{padding:15px!important}
+ .quiz-ui .bottom-controls{grid-template-columns:1fr 1fr 1fr 1fr!important}
+ .quiz-ui .bottom-controls #prev,.quiz-ui .bottom-controls #next,.quiz-ui .bottom-controls #openNavigatorBottom,.quiz-ui .bottom-controls #submit{min-width:0}
+ .quiz-ui .bottom-btn{font-size:10px!important;padding:10px 4px!important}
+}
+@media(max-width:480px){
+ .quiz-ui .quiz-heading h1{font-size:14px!important}
+ .quiz-ui .quiz-action{font-size:10px!important;padding:8px 6px!important}
+ .quiz-ui .exit-btn{padding:8px 9px!important;font-size:11px!important}
+ .quiz-ui .question-card-ui{border-radius:15px!important}
+ .quiz-ui .question-text{font-size:18px!important}
+ .quiz-ui .option-copy{font-size:13px!important}
+}
+/* Align legacy world-token layer with the five current themes. */
+body[data-nx-theme="classic"]{--world-bg:#f3f7fb;--world-surface:#ffffff;--world-surface2:#e9f0f7;--world-text:#172333;--world-muted:#64748b;--world-accent:#2463a8;--world-accent2:#d36b4b;--world-line:rgba(24,48,74,.14);--world-glow:rgba(36,99,168,.08)}
+body[data-nx-theme="midnight"]{--world-bg:#07111d;--world-surface:#0d1b2a;--world-surface2:#12263b;--world-text:#edf5ff;--world-muted:#9fb1c5;--world-accent:#5db5f7;--world-accent2:#e2bd67;--world-line:rgba(133,185,229,.18);--world-glow:rgba(93,181,247,.08)}
+body[data-nx-theme="ivy"]{--world-bg:#f2f5ef;--world-surface:#fbfcf8;--world-surface2:#e7eee3;--world-text:#203328;--world-muted:#647568;--world-accent:#28704b;--world-accent2:#b18448;--world-line:rgba(42,91,60,.16);--world-glow:rgba(40,112,75,.07)}
+body[data-nx-theme="dark"]{--world-bg:#111315;--world-surface:#1a1d20;--world-surface2:#23272b;--world-text:#f2f3f1;--world-muted:#a5aaae;--world-accent:#d3a85c;--world-accent2:#78aeb1;--world-line:rgba(255,255,255,.13);--world-glow:rgba(211,168,92,.06)}
+body[data-nx-theme="arghya"]{--world-bg:#0d0e0f;--world-surface:#171718;--world-surface2:#202020;--world-text:#f4eee2;--world-muted:#aaa396;--world-accent:#d5b15b;--world-accent2:#9d5f42;--world-line:rgba(213,177,91,.20);--world-glow:rgba(213,177,91,.07)}
+/* Five focused study themes: no neon / no gaming */
+body[data-nx-theme="classic"]{--nx-bg:#f3f7fb;--nx-surface:#ffffff;--nx-surface2:#e9f0f7;--nx-text:#172333;--nx-muted:#64748b;--nx-accent:#2463a8;--nx-accent2:#d36b4b;--nx-line:rgba(24,48,74,.14);--nx-glow:rgba(36,99,168,.08)}
+body[data-nx-theme="midnight"]{--nx-bg:#07111d;--nx-surface:#0d1b2a;--nx-surface2:#12263b;--nx-text:#edf5ff;--nx-muted:#9fb1c5;--nx-accent:#5db5f7;--nx-accent2:#e2bd67;--nx-line:rgba(133,185,229,.18);--nx-glow:rgba(93,181,247,.08)}
+body[data-nx-theme="ivy"]{--nx-bg:#f2f5ef;--nx-surface:#fbfcf8;--nx-surface2:#e7eee3;--nx-text:#203328;--nx-muted:#647568;--nx-accent:#28704b;--nx-accent2:#b18448;--nx-line:rgba(42,91,60,.16);--nx-glow:rgba(40,112,75,.07)}
+body[data-nx-theme="dark"]{--nx-bg:#111315;--nx-surface:#1a1d20;--nx-surface2:#23272b;--nx-text:#f2f3f1;--nx-muted:#a5aaae;--nx-accent:#d3a85c;--nx-accent2:#78aeb1;--nx-line:rgba(255,255,255,.13);--nx-glow:rgba(211,168,92,.06)}
+body[data-nx-theme="arghya"]{--nx-bg:#0d0e0f;--nx-surface:#171718;--nx-surface2:#202020;--nx-text:#f4eee2;--nx-muted:#aaa396;--nx-accent:#d5b15b;--nx-accent2:#9d5f42;--nx-line:rgba(213,177,91,.20);--nx-glow:rgba(213,177,91,.07)}
+body[data-nx-theme="classic"] .home,body[data-nx-theme="classic"] .library,body[data-nx-theme="classic"] #result,body[data-nx-theme="classic"] .quiz-ui{background:linear-gradient(180deg,#f6f9fc,#edf3f8)!important;color:var(--nx-text)!important}
+body[data-nx-theme="ivy"] .home,body[data-nx-theme="ivy"] .library,body[data-nx-theme="ivy"] #result,body[data-nx-theme="ivy"] .quiz-ui{background:linear-gradient(180deg,#f7faf4,#edf3e9)!important;color:var(--nx-text)!important}
+body[data-nx-theme="classic"] .quiz-ui .quiz-top,body[data-nx-theme="ivy"] .quiz-ui .quiz-top{background:color-mix(in srgb,var(--nx-bg) 94%,transparent)!important}
+body[data-nx-theme="classic"] .quiz-ui .question-card-ui,body[data-nx-theme="ivy"] .quiz-ui .question-card-ui{background:var(--nx-surface)!important}
+body[data-nx-theme="classic"] .quiz-ui .option-ui,body[data-nx-theme="ivy"] .quiz-ui .option-ui{background:var(--nx-surface2)!important;color:var(--nx-text)!important}
+body[data-nx-theme="classic"] .quiz-ui .option-copy .hi,body[data-nx-theme="ivy"] .quiz-ui .option-copy .hi{color:var(--nx-muted)!important}
+body[data-nx-theme="classic"] .nx-brand b,body[data-nx-theme="classic"] .nx-card-copy strong,body[data-nx-theme="classic"] .nx-stats b,body[data-nx-theme="ivy"] .nx-brand b,body[data-nx-theme="ivy"] .nx-card-copy strong,body[data-nx-theme="ivy"] .nx-stats b{color:var(--nx-text)!important}
+body[data-nx-theme="classic"] .nx-tool,body[data-nx-theme="classic"] .nx-coach-card,body[data-nx-theme="classic"] .nx-stats,body[data-nx-theme="ivy"] .nx-tool,body[data-nx-theme="ivy"] .nx-coach-card,body[data-nx-theme="ivy"] .nx-stats{background:var(--nx-surface)!important;color:var(--nx-text)!important;border-color:var(--nx-line)!important}
+body[data-nx-theme="dark"] .quiz-ui .question-card-ui,body[data-nx-theme="midnight"] .quiz-ui .question-card-ui,body[data-nx-theme="arghya"] .quiz-ui .question-card-ui{background:var(--nx-surface)!important}
+body[data-nx-theme="dark"] .quiz-ui .option-ui,body[data-nx-theme="midnight"] .quiz-ui .option-ui,body[data-nx-theme="arghya"] .quiz-ui .option-ui{background:var(--nx-surface2)!important}
+body[data-nx-theme="classic"] .quiz-ui .option-ui.selected,body[data-nx-theme="ivy"] .quiz-ui .option-ui.selected{color:var(--nx-text)!important}
+body[data-nx-theme="classic"] .quiz-ui .bottom-controls,body[data-nx-theme="ivy"] .quiz-ui .bottom-controls{background:rgba(246,249,252,.96)!important}
+body[data-nx-theme="classic"] #globalThemeBtn,body[data-nx-theme="ivy"] #globalThemeBtn{color:var(--nx-text)!important}
+/* remove old theme visuals completely */
+body[data-nx-theme="classic"] .nx-aurora,body[data-nx-theme="midnight"] .nx-aurora,body[data-nx-theme="ivy"] .nx-aurora,body[data-nx-theme="dark"] .nx-aurora,body[data-nx-theme="arghya"] .nx-aurora{opacity:.06!important}
+body[data-nx-theme="classic"] .nx-bg:before,body[data-nx-theme="ivy"] .nx-bg:before{opacity:.25!important}
+</style>
+
+<script id="bpn-final-login-quiz-fix">
 (function(){
 'use strict';
-function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function read(){try{const x=JSON.parse(localStorage.getItem('BPN_RESUME_TEST_V2')||'null');return x&&x.quizIds&&x.quizIds.length?x:null}catch(e){return null}}
-function update(){const box=document.getElementById('bpnFrontResume'),name=document.getElementById('bpnFrontResumeName'),meta=document.getElementById('bpnFrontResumeMeta'),btn=document.getElementById('bpnFrontResumeBtn');if(!box||!name||!meta||!btn)return;const s=read();if(!s){box.classList.remove('show');return}const total=s.quizIds.length,pos=Math.min(total,Math.max(1,Number(s.i)||1));name.textContent=(s.activeTestMeta&&s.activeTestMeta.name)||s.selectedTest||'Your last test';meta.textContent='Question '+pos+' of '+total+' • '+(s.mode==='exam'?'Exam Mode':'Practice Mode')+' • Saved automatically';box.classList.add('show');btn.onclick=function(){if(window.bpnResumeTest&&typeof window.bpnResumeTest.resume==='function'){const latest=read();if(latest)window.bpnResumeTest.resume(latest)}}}
-function boot(){update();setTimeout(update,900);setTimeout(update,1800);window.addEventListener('bpn-auth-ready',function(){setTimeout(update,500);setTimeout(update,1800)});document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')setTimeout(update,300)});window.addEventListener('storage',update)}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();window.bpnUpdateFrontResume=update;
+const API='https://bpsc-prelims-nexus-auth.onrender.com/api';
+const TOKEN_KEY='BPN_SERVER_SESSION_TOKEN_V1';
+function tok(){try{return sessionStorage.getItem(TOKEN_KEY)||localStorage.getItem(TOKEN_KEY)||''}catch(e){return ''}}
+function auth(){const h={'Content-Type':'application/json'};const t=tok();if(t)h.Authorization='Bearer '+t;return h}
+/* First-login fix: if /app was reached using the secure HttpOnly cookie, do not ask the student to log in again. */
+async function verifyExistingSession(){
+  const gate=document.getElementById('bpnAuthGate');
+  if(!gate)return;
+  try{
+    const t=tok();
+    const r=await fetch(API+'/session',{headers:auth(),credentials:'include',mode:'cors',cache:'no-store'});
+    const d=await r.json();
+    if(d.authenticated&&d.role==='student'){
+      if(!t && d.studentId){
+        /* The server cookie is authoritative; the app can operate with it. */
+        window.dispatchEvent(new CustomEvent('bpn-auth-ready',{detail:{token:'',studentId:d.studentId}}));
+      }
+      gate.classList.add('hide');
+    }
+  }catch(e){}
+}
+/* Pause & Save: save locally, push immediately to the student's server state, then return home. */
+async function pauseQuiz(){
+  const btn=document.getElementById('quizPauseBtn');
+  if(btn){btn.disabled=true;btn.textContent='Saving…'}
+  try{
+    if(window.bpnResumeTest&&typeof window.bpnResumeTest.save==='function')window.bpnResumeTest.save();
+    if(window.bpnCloudSync)await window.bpnCloudSync();
+    if(typeof window.backToHome==='function')window.backToHome();
+    else{document.getElementById('app')?.classList.add('hidden');document.getElementById('home')?.classList.remove('hidden')}
+  }catch(e){
+    if(btn){btn.disabled=false;btn.textContent='⏸ Pause & Save'}
+  }
+}
+function install(){
+  const pb=document.getElementById('quizPauseBtn');if(pb)pb.addEventListener('click',pauseQuiz); const nb=document.getElementById('openNavigatorBottom');if(nb)nb.addEventListener('click',()=>document.getElementById('openNavigator')?.click());
+  const tb=document.getElementById('quizThemeBtn');if(tb)tb.addEventListener('click',()=>{
+    const m=document.getElementById('themeModal');if(m){m.classList.add('open');m.setAttribute('aria-hidden','false')}
+  });
+  /* If an old theme was stored, migrate it to the new study-oriented set. */
+  try{const k='bpsc_nexus_theme',v=localStorage.getItem(k),theme=['classic','midnight','ivy','dark','arghya'].includes(v)?v:'midnight';localStorage.setItem(k,theme);document.body.dataset.nxTheme=theme;document.querySelectorAll('.nx-theme-card').forEach(c=>c.classList.toggle('active',c.dataset.themeChoice===theme));}catch(e){}
+  verifyExistingSession();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
 </script>
 </html>
