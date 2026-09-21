@@ -1514,12 +1514,9 @@ btn.addEventListener('click',async()=>{if(btn.disabled)return;btn.disabled=true;
   <div class="nx-theme-modal" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
     <div class="nx-modal-head"><div><span class="nx-modal-kicker">PERSONALISE YOUR NEXUS</span><h2 id="themeModalTitle">Choose Your Theme</h2><p>Change the visual atmosphere across the entire application.</p></div><button type="button" class="nx-modal-x" id="themeClose" aria-label="Close">×</button></div>
     <div class="nx-theme-grid">
-      <button class="nx-theme-card" data-theme-choice="classic"><span class="theme-preview classic"></span><span><b>01 — CLASSIC</b><small>Clean • crisp • timeless academic study</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="midnight"><span class="theme-preview midnight"></span><span><b>02 — MIDNIGHT</b><small>Calm • focused • easy on the eyes</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="ivy"><span class="theme-preview ivy"></span><span><b>03 — IVY</b><small>Nature-inspired • calm • consistent</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="library"><span class="theme-preview library"></span><span><b>04 — LIBRARY</b><small>Old soul • books • higher goals</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="dark"><span class="theme-preview dark"></span><span><b>05 — DARK</b><small>Distraction-free • serious • ultra focused</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="arghya"><span class="theme-preview arghya"></span><span><b>06 — ARGHYA</b><small>BPSC signature • antique gold • rooted</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="midnight"><span class="theme-preview midnight"></span><span><b>01 — MIDNIGHT</b><small>Calm • focused • easy on the eyes</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="dark"><span class="theme-preview dark"></span><span><b>02 — DARK</b><small>Distraction-free • serious • ultra focused</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="arghya"><span class="theme-preview arghya"></span><span><b>03 — ARGHYA</b><small>BPSC signature • antique gold • rooted</small></span><em>✓</em></button>
     </div>
   </div>
 </div>
@@ -1627,12 +1624,81 @@ body[data-nx-theme="library"] .quiz-ui .question-card-ui{border-color:#c9b79c!im
 /* Make theme picker itself calm and academic. */
 body[data-nx-theme] .nx-theme-modal{box-shadow:0 25px 70px rgba(0,0,0,.25)!important}
 
+/* ================= FINAL STUDY-FIRST QUIZ EXPERIENCE ================= */
+/* During an active quiz, remove non-essential visual noise and keep navigation always reachable. */
+.quiz-ui .quiz-top{box-shadow:none!important;backdrop-filter:none!important}
+.quiz-ui .quiz-mainbar{grid-template-columns:auto minmax(0,1fr) auto!important;gap:10px!important}
+.quiz-ui .quiz-heading h1{font-size:15px!important}
+.quiz-ui .quiz-heading .quiz-summary{gap:4px 8px!important;font-size:10px!important}
+.quiz-ui #quizSelectedSummary,.quiz-ui #quizAnsweredTop{display:none!important}
+.quiz-ui .quiz-subbar{margin-top:7px!important}
+.quiz-ui .question-meta-top{padding-bottom:7px!important}
+.quiz-ui .mode-label{font-size:11px!important}
+.quiz-ui .answered-counter{display:none!important}
+.quiz-ui .section-rail-wrap{display:none!important}
+.quiz-ui .quiz-progress{margin-top:7px!important}
+.quiz-ui .quiz-body{width:min(920px,calc(100% - 28px))!important;padding:16px 0 112px!important}
+.quiz-ui .question-card-ui{box-shadow:0 8px 30px rgba(0,0,0,.12)!important}
+.quiz-ui .q-info-row{margin-bottom:10px!important}
+.quiz-ui .q-source{display:none!important}
+.quiz-ui .q-tags{display:none!important}
+.quiz-ui .question-number{margin-bottom:8px!important;font-size:11px!important}
+.quiz-ui .question-text{font-size:clamp(19px,2vw,25px)!important;line-height:1.48!important}
+.quiz-ui .question-hindi{margin-top:10px!important}
+.quiz-ui .options-ui{margin-top:15px!important;gap:8px!important}
+.quiz-ui .option-ui{padding:10px 11px!important;border-radius:12px!important;box-shadow:none!important}
+.quiz-ui .option-ui:hover{transform:none!important;box-shadow:none!important}
+.quiz-ui .option-letter{width:36px!important;height:36px!important;border-radius:9px!important}
+.quiz-ui .bookmark-row{margin-top:10px!important}
+.quiz-ui .bottom-controls{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:120!important;width:100%!important;margin:0!important;padding:10px max(12px,calc((100vw - 920px)/2)) calc(10px + env(safe-area-inset-bottom))!important;background:color-mix(in srgb,var(--world-bg,#0b1119) 96%,transparent)!important;border-top:1px solid var(--world-line,rgba(255,255,255,.1))!important;backdrop-filter:blur(14px)!important;box-shadow:0 -8px 28px rgba(0,0,0,.16)!important;grid-template-columns:1fr auto 1fr!important}
+.quiz-ui .bottom-btn{min-height:44px!important;padding:10px 14px!important;border-radius:11px!important;box-shadow:none!important}
+.quiz-ui .bottom-btn:hover{transform:none!important}
+.quiz-ui .bottom-btn.submit-btn{background:var(--world-accent,#6d9dcc)!important;color:#fff!important;box-shadow:none!important}
+.quiz-ui #prev{justify-self:start;min-width:118px}
+.quiz-ui #next{justify-self:end;min-width:118px}
+.quiz-ui #submit{min-width:150px}
+/* Compact theme-specific quiz surfaces: each theme follows the same study-first layout. */
+body[data-nx-theme="midnight"] .quiz-ui{background:#0b1119!important;color:#eef3f8!important}
+body[data-nx-theme="midnight"] .quiz-ui .question-card-ui{background:#121b27!important;border-color:#2a3a4c!important}
+body[data-nx-theme="midnight"] .quiz-ui .option-ui{background:#172331!important;border-color:#2a3949!important}
+body[data-nx-theme="midnight"] .quiz-ui .option-ui.selected{background:#1b3045!important;border-color:#6d9dcc!important}
+body[data-nx-theme="dark"] .quiz-ui{background:#16191d!important;color:#f1f3f5!important}
+body[data-nx-theme="dark"] .quiz-ui .question-card-ui{background:#20252a!important;border-color:#3b434b!important}
+body[data-nx-theme="dark"] .quiz-ui .option-ui{background:#262c31!important;border-color:#3b434b!important}
+body[data-nx-theme="dark"] .quiz-ui .option-ui.selected{background:#30373e!important;border-color:#aeb7c2!important}
+body[data-nx-theme="arghya"] .quiz-ui{background:#11110f!important;color:#f5f0e4!important}
+body[data-nx-theme="arghya"] .quiz-ui .question-card-ui{background:#191916!important;border-color:rgba(215,179,91,.24)!important}
+body[data-nx-theme="arghya"] .quiz-ui .option-ui{background:#211f19!important;border-color:rgba(215,179,91,.18)!important}
+body[data-nx-theme="arghya"] .quiz-ui .option-ui.selected{background:#302a1c!important;border-color:#d7b35b!important}
+body[data-nx-theme="arghya"] .quiz-ui .question-number{color:#d7b35b!important}
+@media(max-width:800px){
+  .quiz-ui .quiz-body{width:calc(100% - 14px)!important;padding-bottom:105px!important}
+  .quiz-ui .quiz-mainbar{grid-template-columns:auto minmax(0,1fr) auto!important}
+  .quiz-ui .quiz-top-actions{grid-column:auto!important}
+  .quiz-ui .quiz-action{flex:initial!important}
+  .quiz-ui .quiz-action.nav-primary{font-size:0!important;width:42px!important;padding:9px!important}
+  .quiz-ui .quiz-action.nav-primary:after{content:'☷';font-size:18px}
+  .quiz-ui .pause-btn{font-size:0!important;width:42px!important;padding:9px!important}
+  .quiz-ui .pause-btn:after{content:'Ⅱ';font-size:17px}
+  .quiz-ui .quiz-heading h1{font-size:13px!important}
+  .quiz-ui .quiz-heading .quiz-summary{display:none!important}
+  .quiz-ui .quiz-subbar{align-items:center!important}
+  .quiz-ui .timer{font-size:11px!important;padding:6px 9px!important}
+  .quiz-ui .question-card-ui{padding:15px!important;border-radius:15px!important}
+  .quiz-ui .question-text{font-size:18px!important;line-height:1.5!important}
+  .quiz-ui .option-copy{font-size:14px!important}
+  .quiz-ui .bottom-controls{grid-template-columns:1fr 1fr!important;gap:7px!important;padding:8px 9px calc(8px + env(safe-area-inset-bottom))!important}
+  .quiz-ui #prev,.quiz-ui #next,.quiz-ui #submit{min-width:0!important;width:100%!important}
+  .quiz-ui #submit{grid-column:1/-1;grid-row:1}
+  .quiz-ui #prev{grid-column:1;grid-row:2}
+  .quiz-ui #next{grid-column:2;grid-row:2}
+}
 </style>
 <script>
 /* ===== WORKING PROGRESS / BOOKMARK / THEME CONTROLS ===== */
 (function(){
   const THEME_KEY='bpsc_nexus_theme';
-  const valid=['classic','midnight','ivy','library','dark','arghya'];
+  const valid=['midnight','dark','arghya'];
   const THEME_COPY={
     classic:{gateway:'STUDY DESK',archive:'BPSC ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'STUDY PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
     midnight:{gateway:'MIDNIGHT STUDY',archive:'EXAM ARCHIVE',practice:'FOCUSED PRACTICE',sectional:'SECTIONAL PRACTICE',flt:'MOCK EXAM',progress:'PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
@@ -1690,7 +1756,7 @@ body[data-nx-theme] .nx-theme-modal{box-shadow:0 25px 70px rgba(0,0,0,.25)!impor
   document.querySelectorAll('.nx-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeOverlay(o.id)}));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeOverlay('themeModal');closeOverlay('utilityModal')}});
   const saved=localStorage.getItem(THEME_KEY);
-  applyTheme(valid.includes(saved)?saved:'classic');
+  applyTheme(valid.includes(saved)?saved:'midnight');
 })();
 </script>
 
@@ -2020,16 +2086,16 @@ body[data-nx-theme="gaming"] .quiz-ui *{animation-duration:.01ms!important}
 <script>
 /* Theme bridge: keeps the five worlds visual-only and state-safe. */
 (function(){
-  function activeTheme(){return document.body.dataset.nxTheme||'classic'}
+  function activeTheme(){return document.body.dataset.nxTheme||'midnight'}
   function applyAccent(){
-    const map={classic:'#315f8f',midnight:'#5d9bd6',ivy:'#47785b',library:'#8a6a43',dark:'#aeb7c2',arghya:'#d7b35b'};
-    const accent=map[activeTheme()]||map.classic;
+    const map={midnight:'#6d9dcc',dark:'#aeb7c2',arghya:'#d7b35b'};
+    const accent=map[activeTheme()]||map.midnight;
     document.documentElement.style.setProperty('--theme-accent',accent);
     const app=document.getElementById('app');if(app){app.style.setProperty('--accent',accent,'important');app.style.setProperty('--accent-soft',accent+'2b','important')}
   }
   function syncThemeButton(){
     const b=document.getElementById('globalThemeBtn');if(!b)return;
-    const names={classic:'CLASSIC',midnight:'MIDNIGHT',ivy:'IVY',library:'LIBRARY',dark:'DARK',arghya:'ARGHYA'};
+    const names={midnight:'MIDNIGHT',dark:'DARK',arghya:'ARGHYA'};
     const label=b.querySelector('.gt-label');if(label)label.textContent=innerWidth<601?'':'Theme • '+names[activeTheme()];
   }
   function decorate(){applyAccent();syncThemeButton()}
