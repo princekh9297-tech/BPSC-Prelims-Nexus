@@ -1142,8 +1142,7 @@ function backToHome(){if(tick)clearInterval(tick);closeNav();closeSubmit();docum
 
 
 /* ===== FINAL ENGLISH QUIZ / ENTRY EXPERIENCE PATCH ===== */
-var uiSoundEnabled = localStorage.getItem('bpsc_nexus_ui_sound') !== 'off';
-window.uiSoundEnabled = uiSoundEnabled;
+window.__BPN_UI_SOUND_ENABLED = localStorage.getItem('bpsc_nexus_ui_sound') !== 'off';
 let entryAudioCtx = null, entryRAF = null, entryStart = 0, entryMode = 'kgs';
 const ENTRY_SOUND_PROFILES = {
   kgs:{base:88, sweep:220, harmonics:[1,1.5,2.01], type:'sweep'},
@@ -1159,7 +1158,7 @@ function ensureEntryAudio(){
 }
 function tone(ctx,f,dur,when,gain,type='sine'){const o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.setValueAtTime(f,when);g.gain.setValueAtTime(0.0001,when);g.gain.exponentialRampToValueAtTime(Math.max(.0002,gain),when+.018);g.gain.exponentialRampToValueAtTime(.0001,when+dur);o.connect(g);g.connect(ctx.destination);o.start(when);o.stop(when+dur+.03)}
 function playEntrySound(id){
-  if(!uiSoundEnabled)return;
+  if(!__BPN_UI_SOUND_ENABLED)return;
   try{const ctx=ensureEntryAudio(),p=ENTRY_SOUND_PROFILES[id]||ENTRY_SOUND_PROFILES.bcw,t=ctx.currentTime+.01;
     const master=ctx.createGain();master.gain.value=.16;master.connect(ctx.destination);
     const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.setValueAtTime(p.base,t);osc.frequency.exponentialRampToValueAtTime(p.sweep,t+.48);osc.frequency.exponentialRampToValueAtTime(p.base*1.55,t+.78);gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(.30,t+.035);gain.gain.exponentialRampToValueAtTime(.0001,t+.82);osc.connect(gain);gain.connect(master);osc.start(t);osc.stop(t+.86);
@@ -1169,8 +1168,8 @@ function playEntrySound(id){
     if(p.type==='crystal'){tone(ctx,880,.34,t+.22,.014,'triangle');tone(ctx,1320,.26,t+.34,.010,'sine')}
   }catch(e){}
 }
-function toggleUISound(){uiSoundEnabled=!uiSoundEnabled;window.uiSoundEnabled=uiSoundEnabled;localStorage.setItem('bpsc_nexus_ui_sound',uiSoundEnabled?'on':'off');syncUISoundButton();}
-function syncUISoundButton(){document.querySelectorAll('.nx-sound').forEach(b=>{b.setAttribute('aria-pressed',String(uiSoundEnabled));const sw=b.querySelector('.nx-switch');if(sw)sw.classList.toggle('off',!uiSoundEnabled);const label=b.querySelector('span:nth-child(2)');if(label)label.textContent='Sound';});}
+function toggleUISound(){__BPN_UI_SOUND_ENABLED=!__BPN_UI_SOUND_ENABLED;window.__BPN_UI_SOUND_ENABLED=__BPN_UI_SOUND_ENABLED;localStorage.setItem('bpsc_nexus_ui_sound',__BPN_UI_SOUND_ENABLED?'on':'off');syncUISoundButton();}
+function syncUISoundButton(){document.querySelectorAll('.nx-sound').forEach(b=>{b.setAttribute('aria-pressed',String(__BPN_UI_SOUND_ENABLED));const sw=b.querySelector('.nx-switch');if(sw)sw.classList.toggle('off',!__BPN_UI_SOUND_ENABLED);const label=b.querySelector('span:nth-child(2)');if(label)label.textContent='Sound';});}
 function drawEntryWorld(id){
   const wrap=document.getElementById('transition'),canvas=document.getElementById('transCanvas');if(!wrap||!canvas)return;
   const ctx=canvas.getContext('2d'),d=devicePixelRatio||1,w=innerWidth,h=innerHeight;canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0);
@@ -1233,7 +1232,7 @@ function start(m){mode=m;activeData=TEST_BANKS[selectedTest]||DATA;if(!activeDat
 /* ===== FINAL INSTITUTION + MODE AUDIO/VISUAL ENGINE ===== */
 function softGain(ctx,value,attack=.02,release=.6){const g=ctx.createGain();g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(value,ctx.currentTime+attack);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+release);return g}
 function playModeSound(m,accent){
-  if(!uiSoundEnabled)return;
+  if(!__BPN_UI_SOUND_ENABLED)return;
   try{
     const ctx=ensureEntryAudio(),now=ctx.currentTime+.01;
     const master=ctx.createGain();master.gain.value=m==='exam'?.13:.10;master.connect(ctx.destination);
@@ -1246,7 +1245,7 @@ function playModeSound(m,accent){
   }catch(e){}
 }
 function playInstitutionPowerSound(id){
-  if(!uiSoundEnabled)return;
+  if(!__BPN_UI_SOUND_ENABLED)return;
   try{
     const ctx=ensureEntryAudio(),now=ctx.currentTime+.01;
     const profiles={kgs:[55,110,330],drishti:[49,98,294],eduteria:[65.41,130.81,392],perfection:[46.25,92.5,277.18],bcw:[58.27,116.54,349.23]};
@@ -1310,7 +1309,7 @@ document.getElementById('prev').onclick=()=>move(-1);document.getElementById('ne
   function audio(){if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}
   function osc(ctx,f0,f1,dur,delay,gain,type='sine'){const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+delay;o.type=type;o.frequency.setValueAtTime(f0,t);o.frequency.exponentialRampToValueAtTime(f1,t+dur*.8);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(gain,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+dur+.03)}
   function powerSound(id,kind){
-    if(window.uiSoundEnabled===false)return;
+    if(window.__BPN_UI_SOUND_ENABLED===false)return;
     try{const ctx=audio(),p=ENTRY_PROFILES[id]||ENTRY_PROFILES.bcw;
       if(kind==='institution'){
         osc(ctx,48,92,.70,0,.075,'sine');osc(ctx,92,210,.58,.10,.055,'triangle');osc(ctx,210,430,.42,.25,.035,'sine');
@@ -1962,8 +1961,8 @@ async function api(path,opt={}){const headers={'Content-Type':'application/json'
 function setStudentMsg(t,ok=false){$('bpnStudentMsg').textContent=t||'';$('bpnStudentMsg').style.color=ok?'#67e6b0':'#ff8295'}
 function saveToken(t){token=t;sessionStorage.setItem(TOKEN_KEY,t);localStorage.setItem(TOKEN_KEY,t)}
 function clearToken(){token='';sessionStorage.removeItem(TOKEN_KEY);localStorage.removeItem(TOKEN_KEY)}
-function showApp(){ $('bpnAuthGate').classList.add('hide'); }
-function showGate(){ $('bpnAuthGate').classList.remove('hide'); }
+function showApp(){ const g=$('bpnAuthGate'); if(g){g.classList.add('hide');g.classList.remove('force-show');} }
+function showGate(){ const g=$('bpnAuthGate'); if(g){g.classList.remove('hide');g.classList.add('force-show');} }
 $('bpnStudentForm').addEventListener('submit',async e=>{e.preventDefault();setStudentMsg('Checking credentials…');$('bpnStudentLogin').disabled=true;try{const d=await api('/login',{method:'POST',body:JSON.stringify({studentId:$('bpnStudentId').value.trim(),password:$('bpnStudentPw').value})});saveToken(d.token);window.dispatchEvent(new CustomEvent('bpn-auth-ready',{detail:{token:d.token,studentId:($('bpnStudentId').value||'').trim().toUpperCase()}}));showApp();setStudentMsg('',true)}catch(err){clearToken();setStudentMsg(err.message)}finally{$('bpnStudentLogin').disabled=false}});
 $('bpnAdminOpen').onclick=async()=>{const id=prompt('Admin ID');if(id===null)return;const pw=prompt('Admin password');if(pw===null)return;try{const d=await fetch(API+'/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'omit',body:JSON.stringify({id:id.trim(),password:pw})});let x={};try{x=await d.json()}catch{}if(!d.ok)throw Error(x.error||'Admin login failed.');saveToken(x.token);await loadStudents();$('bpnAdmin').classList.add('show')}catch(e){alert(e.message);clearToken()}};
 $('bpnAdminClose').onclick=async()=>{try{await api('/logout',{method:'POST'})}catch{}clearToken();$('bpnAdmin').classList.remove('show');showGate()};
@@ -2416,3 +2415,50 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   installConfidence();
 })();
 </script>
+
+
+<style id="bpn-final-hardening-css">
+/* FINAL: keep authentication gate hidden until server verification explicitly fails */
+#bpnAuthGate{display:none!important}
+#bpnAuthGate.force-show{display:flex!important}
+/* FINAL: study-first quiz layout */
+body.quiz-active #globalThemeBtn,body.quiz-active #bpnServerLogoutBtn{display:none!important}
+body.quiz-active .quiz-ui .quiz-top{position:sticky!important;top:0!important;z-index:500!important;background:rgba(10,12,14,.97)!important;backdrop-filter:blur(12px)!important}
+body.quiz-active .quiz-ui .quiz-top-inner{padding:7px 0 0!important}
+body.quiz-active .quiz-ui .quiz-mainbar{grid-template-columns:auto minmax(0,1fr) auto!important;gap:8px!important;min-height:52px!important}
+body.quiz-active .quiz-ui .quiz-heading h1{font-size:15px!important}
+body.quiz-active .quiz-ui .quiz-summary{display:none!important}
+body.quiz-active .quiz-ui .quiz-top-actions{display:flex!important;align-items:center!important;gap:6px!important}
+body.quiz-active .quiz-ui .quiz-action{padding:8px 10px!important;font-size:11px!important}
+body.quiz-active .quiz-ui .quiz-subbar{display:none!important}
+body.quiz-active .quiz-ui .quiz-progress{margin-top:5px!important;height:3px!important}
+body.quiz-active .quiz-ui .section-rail-wrap{display:none!important}
+body.quiz-active .quiz-ui .quiz-body{padding-top:12px!important;padding-bottom:92px!important}
+body.quiz-active .quiz-ui .bottom-controls{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:900!important;margin:0!important;padding:8px 10px max(8px,env(safe-area-inset-bottom))!important;background:rgba(8,9,10,.97)!important;border-top:1px solid rgba(255,255,255,.10)!important;backdrop-filter:blur(14px)!important;box-shadow:0 -10px 30px rgba(0,0,0,.30)!important}
+body.quiz-active .quiz-ui .bottom-controls .bottom-btn{min-height:44px!important}
+@media(max-width:700px){body.quiz-active .quiz-ui .quiz-mainbar{grid-template-columns:auto 1fr auto!important}body.quiz-active .quiz-ui .quiz-heading{min-width:0!important}body.quiz-active .quiz-ui .quiz-heading h1{font-size:14px!important}body.quiz-active .quiz-ui .quiz-action{padding:8px!important}.quiz-ui .quiz-theme-inline{display:none!important}}
+</style>
+<script id="bpn-final-hard-test-engine">
+(function(){
+'use strict';
+function hideEntryLayers(){['transition','modeTransition','testLoadError'].forEach(id=>{const e=document.getElementById(id);if(e){e.classList.remove('show');e.setAttribute('aria-hidden','true')}})}
+function hideQuizScreens(){document.querySelectorAll('.screen').forEach(e=>{if(e.id!=='app'&&e.id!=='result')e.classList.add('hidden')});document.getElementById('result')?.classList.add('hidden');document.getElementById('app')?.classList.remove('hidden')}
+function safeStart(testId,m,resume){
+ const bank=(typeof TEST_BANKS!=='undefined'&&TEST_BANKS[testId])||(testId==='kgs-flt-01'&&typeof DATA!=='undefined'?DATA:null);
+ if(!bank||typeof bank!=='object'||!Object.keys(bank).length)throw new Error('No questions were found for this test.');
+ selectedTest=testId;activeData=bank;mode=m==='exam'?'exam':'practice';activeTestMeta=(INSTITUTIONS[selectedInstitute]?.tests||[]).find(t=>t.id===selectedTest)||null;
+ hideEntryLayers();hideQuizScreens();document.body.classList.add('quiz-active');
+ if(tick)clearInterval(tick);
+ if(resume){quizIds=Array.isArray(resume.quizIds)&&resume.quizIds.length?resume.quizIds.map(Number):Object.keys(activeData).map(Number).sort((a,b)=>a-b);answers=resume.answers||{};marked=new Set(resume.marked||[]);i=Math.min(quizIds.length,Math.max(1,Number(resume.i)||1));remaining=Math.max(0,Number(resume.remaining)||0)}
+ else{i=1;answers={};marked=new Set();submitted=false;remaining=7200;if(typeof buildQuizStructure==='function')buildQuizStructure()}
+ submitted=false;
+ if(mode==='exam'){if(remaining<=0)remaining=7200;tick=setInterval(()=>{remaining--;if(typeof renderTimer==='function')renderTimer();try{window.bpnResumeTest?.save?.()}catch(e){}if(remaining<=0){clearInterval(tick);if(typeof submitTest==='function')submitTest(true)}},1000)}
+ if(typeof render!=='function')throw new Error('Quiz renderer is unavailable.');
+ render();try{window.bpnResumeTest?.save?.()}catch(e){}window.scrollTo({top:0,behavior:'auto'});
+}
+window.__BPN_SAFE_START=safeStart;
+window.start=function(m){return safeStart(selectedTest,m,null)};
+window.launchTest=function(testId,m){try{selectedTest=testId;const s=window.bpnResumeTest?.read?.();if(s&&s.selectedTest===testId&&s.quizIds?.length&&typeof window.bpnResumeTest.open==='function'){window.bpnResumeTest.open(s,m);return}safeStart(testId,m,null)}catch(err){console.error('[BPN] Test start failed',err);hideEntryLayers();if(typeof showTestLoadError==='function')showTestLoadError(err.message||'Unable to open this test.');else alert(err.message||'Unable to open this test.')}};
+})();
+</script>
+
