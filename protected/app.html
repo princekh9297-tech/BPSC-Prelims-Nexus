@@ -1514,10 +1514,12 @@ btn.addEventListener('click',async()=>{if(btn.disabled)return;btn.disabled=true;
   <div class="nx-theme-modal" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
     <div class="nx-modal-head"><div><span class="nx-modal-kicker">PERSONALISE YOUR NEXUS</span><h2 id="themeModalTitle">Choose Your Theme</h2><p>Change the visual atmosphere across the entire application.</p></div><button type="button" class="nx-modal-x" id="themeClose" aria-label="Close">×</button></div>
     <div class="nx-theme-grid">
-      <button class="nx-theme-card" data-theme-choice="nebula"><span class="theme-preview nebula"></span><span><b>01 — NEBULA NEXUS</b><small>Cosmic exploration • indigo • restrained gold</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="deep-study"><span class="theme-preview deep-study"></span><span><b>02 — DEEP STUDY MODE</b><small>Focused desk • parchment • warm amber</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="gaming"><span class="theme-preview gaming"></span><span><b>03 — GAMING ZONE</b><small>Competitive training • cyan • controlled violet</small></span><em>✓</em></button>
-      <button class="nx-theme-card" data-theme-choice="summit"><span class="theme-preview summit"></span><span><b>04 — SUMMIT</b><small>Peak performance • graphite • electric blue</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="classic"><span class="theme-preview classic"></span><span><b>01 — CLASSIC</b><small>Clean • crisp • timeless academic study</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="midnight"><span class="theme-preview midnight"></span><span><b>02 — MIDNIGHT</b><small>Calm • focused • easy on the eyes</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="ivy"><span class="theme-preview ivy"></span><span><b>03 — IVY</b><small>Nature-inspired • calm • consistent</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="library"><span class="theme-preview library"></span><span><b>04 — LIBRARY</b><small>Old soul • books • higher goals</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="dark"><span class="theme-preview dark"></span><span><b>05 — DARK</b><small>Distraction-free • serious • ultra focused</small></span><em>✓</em></button>
+      <button class="nx-theme-card" data-theme-choice="arghya"><span class="theme-preview arghya"></span><span><b>06 — ARGHYA</b><small>BPSC signature • antique gold • rooted</small></span><em>✓</em></button>
     </div>
   </div>
 </div>
@@ -1558,17 +1560,86 @@ body[data-nx-theme="study"] .nx-aurora{opacity:.10!important;filter:blur(70px)!i
 .nx-overlay{position:fixed;inset:0;z-index:200000;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.62);backdrop-filter:blur(16px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility .22s ease}.nx-overlay.open{opacity:1;visibility:visible;pointer-events:auto}.nx-theme-modal,.nx-utility-modal{width:min(760px,100%);max-height:min(86vh,760px);overflow:auto;border:1px solid var(--nx-line);border-radius:26px;background:linear-gradient(145deg,color-mix(in srgb,var(--nx-surface) 96%,transparent),color-mix(in srgb,var(--nx-bg) 96%,transparent));box-shadow:0 35px 110px rgba(0,0,0,.65),0 0 70px var(--nx-glow);padding:22px}.nx-modal-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.nx-modal-kicker{font-size:9px;letter-spacing:.25em;color:var(--nx-accent);font-weight:900}.nx-modal-head h2{margin:7px 0 4px;font-size:25px;letter-spacing:-.03em;color:var(--nx-text)}.nx-modal-head p{margin:0;color:var(--nx-muted);font-size:12px}.nx-modal-x{width:38px;height:38px;border-radius:12px;border:1px solid var(--nx-line);background:rgba(255,255,255,.04);color:var(--nx-text);font-size:22px;cursor:pointer}.nx-theme-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.nx-theme-card{display:grid;grid-template-columns:62px 1fr 20px;align-items:center;gap:12px;text-align:left;padding:11px;border:1px solid var(--nx-line);background:rgba(255,255,255,.025);border-radius:16px;color:var(--nx-text);cursor:pointer;transition:.2s ease}.nx-theme-card:hover{transform:translateY(-2px);border-color:var(--nx-accent);box-shadow:0 10px 28px var(--nx-glow)}.nx-theme-card.active{border-color:var(--nx-accent);box-shadow:0 0 0 1px var(--nx-accent) inset,0 12px 30px var(--nx-glow)}.nx-theme-card b{display:block;font-size:12px}.nx-theme-card small{display:block;color:var(--nx-muted);font-size:9px;margin-top:4px;line-height:1.35}.nx-theme-card em{font-style:normal;opacity:0;color:var(--nx-accent);font-weight:900}.nx-theme-card.active em{opacity:1}.theme-preview{width:62px;height:42px;border-radius:11px;border:1px solid rgba(255,255,255,.14);position:relative;overflow:hidden}.theme-preview:after{content:"";position:absolute;right:8px;bottom:7px;width:22px;height:4px;border-radius:99px;background:currentColor;box-shadow:0 0 10px currentColor}.theme-preview.midnight{background:linear-gradient(135deg,#06111e,#10395e);color:#5bc5ff}.theme-preview.study{background:linear-gradient(135deg,#121a16,#425849);color:#d8c98f}.theme-preview.royal{background:linear-gradient(135deg,#0d0a25,#4c358c);color:#e7c46f}.theme-preview.emerald{background:linear-gradient(135deg,#03100c,#176644);color:#59d69a}.theme-preview.crimson{background:linear-gradient(135deg,#100609,#762030);color:#e4bc77}.theme-preview.arctic{background:linear-gradient(135deg,#071019,#28516b);color:#9ce4ff}.nx-utility-modal{width:min(620px,100%)}.nx-utility-body{margin-top:18px}.utility-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.utility-kpi{padding:15px;border:1px solid var(--nx-line);border-radius:15px;background:rgba(255,255,255,.025)}.utility-kpi b{display:block;font-size:23px;color:var(--nx-accent)}.utility-kpi span{display:block;margin-top:3px;font-size:9px;color:var(--nx-muted);text-transform:uppercase;letter-spacing:.08em}.utility-empty{padding:24px;border:1px dashed var(--nx-line);border-radius:16px;text-align:center;color:var(--nx-muted);line-height:1.7}.utility-list{display:grid;gap:7px;margin-top:12px}.utility-item{padding:11px 12px;border-radius:12px;border:1px solid var(--nx-line);background:rgba(255,255,255,.025);font-size:11px}.utility-item b{color:var(--nx-text)}
 @media(max-width:700px){.nx-theme-modal,.nx-utility-modal{padding:17px;border-radius:20px}.nx-theme-grid{grid-template-columns:1fr}.nx-theme-card{grid-template-columns:56px 1fr 18px}.theme-preview{width:56px;height:40px}.utility-kpis{grid-template-columns:1fr 1fr 1fr}.utility-kpi{padding:11px}.utility-kpi b{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.nx-overlay,.nx-theme-card{transition:none!important}}
+
+/* ===== BPSC NEXUS 2.0 — ACADEMIC THEME PACK ===== */
+body[data-nx-theme="classic"]{--nx-bg:#f4f7fa;--nx-surface:#ffffff;--nx-surface2:#eaf0f5;--nx-text:#17202a;--nx-muted:#647384;--nx-accent:#315f8f;--nx-accent2:#a67c3b;--nx-line:rgba(32,57,79,.14);--nx-glow:rgba(49,95,143,.08);--world-bg:#f4f7fa;--world-surface:#fff;--world-surface2:#eaf0f5;--world-text:#17202a;--world-muted:#647384;--world-accent:#315f8f;--world-accent2:#a67c3b;--world-line:rgba(32,57,79,.14);--world-glow:rgba(49,95,143,.08)}
+body[data-nx-theme="midnight"]{--nx-bg:#0b1119;--nx-surface:#121b27;--nx-surface2:#182333;--nx-text:#eef3f8;--nx-muted:#9aa9ba;--nx-accent:#6d9dcc;--nx-accent2:#c9a96b;--nx-line:rgba(180,202,225,.14);--nx-glow:rgba(90,140,190,.08);--world-bg:#0b1119;--world-surface:#121b27;--world-surface2:#182333;--world-text:#eef3f8;--world-muted:#9aa9ba;--world-accent:#6d9dcc;--world-accent2:#c9a96b;--world-line:rgba(180,202,225,.14);--world-glow:rgba(90,140,190,.08)}
+body[data-nx-theme="ivy"]{--nx-bg:#f3f5ef;--nx-surface:#fbfcf8;--nx-surface2:#e8eee3;--nx-text:#203126;--nx-muted:#68786d;--nx-accent:#47785b;--nx-accent2:#9a7a42;--nx-line:rgba(43,70,52,.14);--nx-glow:rgba(71,120,91,.07);--world-bg:#f3f5ef;--world-surface:#fbfcf8;--world-surface2:#e8eee3;--world-text:#203126;--world-muted:#68786d;--world-accent:#47785b;--world-accent2:#9a7a42;--world-line:rgba(43,70,52,.14);--world-glow:rgba(71,120,91,.07)}
+body[data-nx-theme="library"]{--nx-bg:#eee5d6;--nx-surface:#faf4e9;--nx-surface2:#e6d8c3;--nx-text:#33281e;--nx-muted:#766656;--nx-accent:#725235;--nx-accent2:#a67c3b;--nx-line:rgba(75,51,30,.16);--nx-glow:rgba(114,82,53,.08);--world-bg:#eee5d6;--world-surface:#faf4e9;--world-surface2:#e6d8c3;--world-text:#33281e;--world-muted:#766656;--world-accent:#725235;--world-accent2:#a67c3b;--world-line:rgba(75,51,30,.16);--world-glow:rgba(114,82,53,.08)}
+body[data-nx-theme="dark"]{--nx-bg:#16191d;--nx-surface:#20252a;--nx-surface2:#292f35;--nx-text:#edf0f2;--nx-muted:#a2aab2;--nx-accent:#aeb7c2;--nx-accent2:#d0a45c;--nx-line:rgba(230,235,240,.12);--nx-glow:rgba(190,200,210,.05);--world-bg:#16191d;--world-surface:#20252a;--world-surface2:#292f35;--world-text:#edf0f2;--world-muted:#a2aab2;--world-accent:#aeb7c2;--world-accent2:#d0a45c;--world-line:rgba(230,235,240,.12);--world-glow:rgba(190,200,210,.05)}
+body[data-nx-theme="arghya"]{--nx-bg:#11110f;--nx-surface:#191916;--nx-surface2:#22211d;--nx-text:#f4efe3;--nx-muted:#aaa18f;--nx-accent:#d7b35b;--nx-accent2:#efe0ad;--nx-line:rgba(215,179,91,.17);--nx-glow:rgba(215,179,91,.06);--world-bg:#11110f;--world-surface:#191916;--world-surface2:#22211d;--world-text:#f4efe3;--world-muted:#aaa18f;--world-accent:#d7b35b;--world-accent2:#efe0ad;--world-line:rgba(215,179,91,.17);--world-glow:rgba(215,179,91,.06)}
+/* Remove the old glowing atmosphere for all new themes. */
+body[data-nx-theme="classic"],body[data-nx-theme="ivy"],body[data-nx-theme="library"]{background:var(--nx-bg)!important}
+body[data-nx-theme="classic"] .nx-aurora,body[data-nx-theme="ivy"] .nx-aurora,body[data-nx-theme="library"] .nx-aurora,body[data-nx-theme="midnight"] .nx-aurora,body[data-nx-theme="dark"] .nx-aurora,body[data-nx-theme="arghya"] .nx-aurora{display:none!important}
+body[data-nx-theme] .nx-bg{opacity:.08!important}
+body[data-nx-theme] .nx-hero-pill,body[data-nx-theme] .pulse-dot{box-shadow:none!important}
+body[data-nx-theme] .nx-brand-mark{box-shadow:none!important}
+body[data-nx-theme] .nx-tool:hover{box-shadow:none!important}
+body[data-nx-theme] .nx-coach-card:hover,body[data-nx-theme] .test-card:hover{box-shadow:0 12px 30px rgba(0,0,0,.08)!important;transform:translateY(-2px)}
+body[data-nx-theme] .nx-theme-card:hover{box-shadow:0 8px 20px rgba(0,0,0,.08)!important}
+body[data-nx-theme] .nx-hero h1 strong{background:none!important;-webkit-text-fill-color:initial!important;color:var(--nx-accent2)!important}
+body[data-nx-theme] .quiz-ui .question-card-ui,body[data-nx-theme] .quiz-ui .option-ui{box-shadow:none!important}
+/* Theme-specific application surfaces */
+body[data-nx-theme="classic"] .home,body[data-nx-theme="classic"] .library,body[data-nx-theme="classic"] #result,body[data-nx-theme="classic"] .quiz-ui{background:#f4f7fa!important}
+body[data-nx-theme="classic"] .nx-coach-card,body[data-nx-theme="classic"] .nx-mode-card,body[data-nx-theme="classic"] .test-card,body[data-nx-theme="classic"] .quiz-ui .question-card-ui,body[data-nx-theme="classic"] .quiz-ui .option-ui{background:#fff!important;color:#17202a!important}
+body[data-nx-theme="classic"] .quiz-ui .quiz-top{background:#fff!important}
+body[data-nx-theme="classic"] .quiz-ui .option-ui.selected{background:#e9f1f9!important}
+body[data-nx-theme="classic"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#315f8f!important}
+body[data-nx-theme="midnight"] .home,body[data-nx-theme="midnight"] .library,body[data-nx-theme="midnight"] #result,body[data-nx-theme="midnight"] .quiz-ui{background:#0b1119!important}
+body[data-nx-theme="midnight"] .nx-coach-card,body[data-nx-theme="midnight"] .nx-mode-card,body[data-nx-theme="midnight"] .test-card,body[data-nx-theme="midnight"] .quiz-ui .question-card-ui,body[data-nx-theme="midnight"] .quiz-ui .option-ui{background:#121b27!important}
+body[data-nx-theme="midnight"] .quiz-ui .quiz-top{background:#0b1119!important}
+body[data-nx-theme="midnight"] .quiz-ui .option-ui.selected{background:#1b3045!important}
+body[data-nx-theme="midnight"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#476f99!important}
+body[data-nx-theme="ivy"] .home,body[data-nx-theme="ivy"] .library,body[data-nx-theme="ivy"] #result,body[data-nx-theme="ivy"] .quiz-ui{background:#f3f5ef!important}
+body[data-nx-theme="ivy"] .nx-coach-card,body[data-nx-theme="ivy"] .nx-mode-card,body[data-nx-theme="ivy"] .test-card,body[data-nx-theme="ivy"] .quiz-ui .question-card-ui,body[data-nx-theme="ivy"] .quiz-ui .option-ui{background:#fbfcf8!important}
+body[data-nx-theme="ivy"] .quiz-ui .quiz-top{background:#fbfcf8!important}
+body[data-nx-theme="ivy"] .quiz-ui .option-ui.selected{background:#e3ede1!important}
+body[data-nx-theme="ivy"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#47785b!important}
+body[data-nx-theme="library"] .home,body[data-nx-theme="library"] .library,body[data-nx-theme="library"] #result,body[data-nx-theme="library"] .quiz-ui{background:#eee5d6!important}
+body[data-nx-theme="library"] .nx-coach-card,body[data-nx-theme="library"] .nx-mode-card,body[data-nx-theme="library"] .test-card,body[data-nx-theme="library"] .quiz-ui .question-card-ui,body[data-nx-theme="library"] .quiz-ui .option-ui{background:#faf4e9!important}
+body[data-nx-theme="library"] .quiz-ui .quiz-top{background:#eee5d6!important}
+body[data-nx-theme="library"] .quiz-ui .option-ui.selected{background:#eadcc8!important}
+body[data-nx-theme="library"] .quiz-ui .bottom-btn.primary{color:#fff!important;background:#725235!important}
+body[data-nx-theme="dark"] .home,body[data-nx-theme="dark"] .library,body[data-nx-theme="dark"] #result,body[data-nx-theme="dark"] .quiz-ui{background:#16191d!important}
+body[data-nx-theme="dark"] .nx-coach-card,body[data-nx-theme="dark"] .nx-mode-card,body[data-nx-theme="dark"] .test-card,body[data-nx-theme="dark"] .quiz-ui .question-card-ui,body[data-nx-theme="dark"] .quiz-ui .option-ui{background:#20252a!important}
+body[data-nx-theme="dark"] .quiz-ui .quiz-top{background:#16191d!important}
+body[data-nx-theme="dark"] .quiz-ui .option-ui.selected{background:#30373e!important}
+body[data-nx-theme="dark"] .quiz-ui .bottom-btn.primary{color:#111!important;background:#aeb7c2!important}
+body[data-nx-theme="arghya"] .home,body[data-nx-theme="arghya"] .library,body[data-nx-theme="arghya"] #result,body[data-nx-theme="arghya"] .quiz-ui{background:#11110f!important}
+body[data-nx-theme="arghya"] .nx-coach-card,body[data-nx-theme="arghya"] .nx-mode-card,body[data-nx-theme="arghya"] .test-card,body[data-nx-theme="arghya"] .quiz-ui .question-card-ui,body[data-nx-theme="arghya"] .quiz-ui .option-ui{background:#191916!important}
+body[data-nx-theme="arghya"] .quiz-ui .quiz-top{background:#11110f!important}
+body[data-nx-theme="arghya"] .quiz-ui .option-ui.selected{background:#302a1c!important}
+body[data-nx-theme="arghya"] .quiz-ui .bottom-btn.primary{color:#16130b!important;background:#d7b35b!important}
+/* In-quiz typography and controls change with every theme too. */
+body[data-nx-theme="library"] .quiz-ui .question-text{font-family:Georgia,"Times New Roman",serif!important}
+body[data-nx-theme="classic"] .quiz-ui .question-text,body[data-nx-theme="ivy"] .quiz-ui .question-text{font-weight:650!important}
+body[data-nx-theme="dark"] .quiz-ui .question-card-ui{border-color:#3b434b!important}
+body[data-nx-theme="arghya"] .quiz-ui .question-card-ui{border-color:rgba(215,179,91,.24)!important}
+body[data-nx-theme="library"] .quiz-ui .question-card-ui{border-color:#c9b79c!important}
+/* New theme previews */
+.theme-preview.classic{background:linear-gradient(135deg,#f5f8fb,#dce8f2);color:#315f8f}
+.theme-preview.midnight{background:linear-gradient(135deg,#0b1119,#243a52);color:#6d9dcc}
+.theme-preview.ivy{background:linear-gradient(135deg,#f3f5ef,#dbe7d7);color:#47785b}
+.theme-preview.library{background:linear-gradient(135deg,#eee5d6,#cdbb9e);color:#725235}
+.theme-preview.dark{background:linear-gradient(135deg,#16191d,#343a40);color:#aeb7c2}
+.theme-preview.arghya{background:linear-gradient(135deg,#11110f,#39331f);color:#d7b35b}
+.theme-preview.classic:after,.theme-preview.midnight:after,.theme-preview.ivy:after,.theme-preview.library:after,.theme-preview.dark:after,.theme-preview.arghya:after{box-shadow:none}
+/* Make theme picker itself calm and academic. */
+body[data-nx-theme] .nx-theme-modal{box-shadow:0 25px 70px rgba(0,0,0,.25)!important}
+
 </style>
 <script>
 /* ===== WORKING PROGRESS / BOOKMARK / THEME CONTROLS ===== */
 (function(){
   const THEME_KEY='bpsc_nexus_theme';
-  const valid=['nebula','deep-study','gaming','summit'];
+  const valid=['classic','midnight','ivy','library','dark','arghya'];
   const THEME_COPY={
-    'nebula':{gateway:'COSMIC GATEWAY',archive:'BPSC ARCHIVE',practice:'KNOWLEDGE EXPLORATION',sectional:'TRAINING ORBITS',flt:'MISSION SIMULATION',progress:'ASCENT',bookmarks:'KNOWLEDGE STARS',niva:'AI NAVIGATOR'},
-    'deep-study':{gateway:'STUDY DESK',archive:'EXAM ARCHIVE',practice:'STUDY MODE',sectional:'FOCUSED PRACTICE',flt:'MOCK EXAM',progress:'STUDY PROGRESS',bookmarks:'SAVED NOTES',niva:'STUDY COMPANION'},
-    'gaming':{gateway:'TRAINING HUB',archive:'LEGACY ARCHIVE',practice:'TRAINING ARENA',sectional:'TRAINING MISSION',flt:'BOSS MISSION',progress:'PLAYER STATS',bookmarks:'LOADOUT',niva:'AI COACH'},
-    'summit':{gateway:'SUMMIT',archive:'EXAM INTELLIGENCE',practice:'KNOWLEDGE NETWORK',sectional:'PERFORMANCE ENGINE',flt:'PERFORMANCE ENGINE',progress:'ANALYTICS',bookmarks:'KNOWLEDGE VAULT',niva:'INTELLIGENCE ASSISTANT'}
+    classic:{gateway:'STUDY DESK',archive:'BPSC ARCHIVE',practice:'PRACTICE MODE',sectional:'SECTIONAL PRACTICE',flt:'FULL LENGTH TEST',progress:'STUDY PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
+    midnight:{gateway:'MIDNIGHT STUDY',archive:'EXAM ARCHIVE',practice:'FOCUSED PRACTICE',sectional:'SECTIONAL PRACTICE',flt:'MOCK EXAM',progress:'PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
+    ivy:{gateway:'QUIET STUDY',archive:'BPSC ARCHIVE',practice:'DAILY PRACTICE',sectional:'FOCUSED PRACTICE',flt:'FULL LENGTH TEST',progress:'STUDY PROGRESS',bookmarks:'SAVED QUESTIONS',niva:'STUDY COMPANION'},
+    library:{gateway:'THE STUDY LIBRARY',archive:'EXAM ARCHIVE',practice:'KNOWLEDGE PRACTICE',sectional:'SUBJECT PRACTICE',flt:'MOCK EXAM',progress:'STUDY RECORD',bookmarks:'BOOKMARKS',niva:'STUDY COMPANION'},
+    dark:{gateway:'FOCUS MODE',archive:'BPSC ARCHIVE',practice:'PRACTICE',sectional:'SUBJECT TESTS',flt:'FULL LENGTH TEST',progress:'PERFORMANCE',bookmarks:'BOOKMARKS',niva:'STUDY COMPANION'},
+    arghya:{gateway:'BPSC NEXUS',archive:'BPSC ARCHIVE',practice:'PRELIMS PRACTICE',sectional:'SUBJECT TESTS',flt:'FULL LENGTH TEST',progress:'PREPARATION',bookmarks:'KNOWLEDGE VAULT',niva:'STUDY COMPANION'}
   };
   function syncThemeCopy(name){
     const c=THEME_COPY[name]||THEME_COPY.nebula;
@@ -1618,6 +1689,8 @@ body[data-nx-theme="study"] .nx-aurora{opacity:.10!important;filter:blur(70px)!i
   document.querySelector('.nx-bookmarks')?.addEventListener('click',()=>showUtility('bookmarks'));
   document.querySelectorAll('.nx-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeOverlay(o.id)}));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeOverlay('themeModal');closeOverlay('utilityModal')}});
+  const saved=localStorage.getItem(THEME_KEY);
+  applyTheme(valid.includes(saved)?saved:'classic');
 })();
 </script>
 
@@ -1947,16 +2020,16 @@ body[data-nx-theme="gaming"] .quiz-ui *{animation-duration:.01ms!important}
 <script>
 /* Theme bridge: keeps the five worlds visual-only and state-safe. */
 (function(){
-  function activeTheme(){return document.body.dataset.nxTheme||'nebula'}
+  function activeTheme(){return document.body.dataset.nxTheme||'classic'}
   function applyAccent(){
-    const map={nebula:'#9b86ff','deep-study':'#b8ad82',gaming:'#25d7ff',summit:'#55b9ff'};
-    const accent=map[activeTheme()]||map.nebula;
+    const map={classic:'#315f8f',midnight:'#5d9bd6',ivy:'#47785b',library:'#8a6a43',dark:'#aeb7c2',arghya:'#d7b35b'};
+    const accent=map[activeTheme()]||map.classic;
     document.documentElement.style.setProperty('--theme-accent',accent);
     const app=document.getElementById('app');if(app){app.style.setProperty('--accent',accent,'important');app.style.setProperty('--accent-soft',accent+'2b','important')}
   }
   function syncThemeButton(){
     const b=document.getElementById('globalThemeBtn');if(!b)return;
-    const names={nebula:'NEBULA', 'deep-study':'DEEP STUDY',gaming:'GAMING',summit:'SUMMIT'};
+    const names={classic:'CLASSIC',midnight:'MIDNIGHT',ivy:'IVY',library:'LIBRARY',dark:'DARK',arghya:'ARGHYA'};
     const label=b.querySelector('.gt-label');if(label)label.textContent=innerWidth<601?'':'Theme • '+names[activeTheme()];
   }
   function decorate(){applyAccent();syncThemeButton()}
