@@ -1142,7 +1142,8 @@ function backToHome(){if(tick)clearInterval(tick);closeNav();closeSubmit();docum
 
 
 /* ===== FINAL ENGLISH QUIZ / ENTRY EXPERIENCE PATCH ===== */
-let uiSoundEnabled = localStorage.getItem('bpsc_nexus_ui_sound') !== 'off';
+var uiSoundEnabled = localStorage.getItem('bpsc_nexus_ui_sound') !== 'off';
+window.uiSoundEnabled = uiSoundEnabled;
 let entryAudioCtx = null, entryRAF = null, entryStart = 0, entryMode = 'kgs';
 const ENTRY_SOUND_PROFILES = {
   kgs:{base:88, sweep:220, harmonics:[1,1.5,2.01], type:'sweep'},
@@ -1168,7 +1169,7 @@ function playEntrySound(id){
     if(p.type==='crystal'){tone(ctx,880,.34,t+.22,.014,'triangle');tone(ctx,1320,.26,t+.34,.010,'sine')}
   }catch(e){}
 }
-function toggleUISound(){uiSoundEnabled=!uiSoundEnabled;localStorage.setItem('bpsc_nexus_ui_sound',uiSoundEnabled?'on':'off');syncUISoundButton();}
+function toggleUISound(){uiSoundEnabled=!uiSoundEnabled;window.uiSoundEnabled=uiSoundEnabled;localStorage.setItem('bpsc_nexus_ui_sound',uiSoundEnabled?'on':'off');syncUISoundButton();}
 function syncUISoundButton(){document.querySelectorAll('.nx-sound').forEach(b=>{b.setAttribute('aria-pressed',String(uiSoundEnabled));const sw=b.querySelector('.nx-switch');if(sw)sw.classList.toggle('off',!uiSoundEnabled);const label=b.querySelector('span:nth-child(2)');if(label)label.textContent='Sound';});}
 function drawEntryWorld(id){
   const wrap=document.getElementById('transition'),canvas=document.getElementById('transCanvas');if(!wrap||!canvas)return;
@@ -1309,7 +1310,7 @@ document.getElementById('prev').onclick=()=>move(-1);document.getElementById('ne
   function audio(){if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}
   function osc(ctx,f0,f1,dur,delay,gain,type='sine'){const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+delay;o.type=type;o.frequency.setValueAtTime(f0,t);o.frequency.exponentialRampToValueAtTime(f1,t+dur*.8);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(gain,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+dur+.03)}
   function powerSound(id,kind){
-    if(typeof uiSoundEnabled!=='undefined'&&!uiSoundEnabled)return;
+    if(window.uiSoundEnabled===false)return;
     try{const ctx=audio(),p=ENTRY_PROFILES[id]||ENTRY_PROFILES.bcw;
       if(kind==='institution'){
         osc(ctx,48,92,.70,0,.075,'sine');osc(ctx,92,210,.58,.10,.055,'triangle');osc(ctx,210,430,.42,.25,.035,'sine');
@@ -1431,7 +1432,7 @@ document.getElementById('prev').onclick=()=>move(-1);document.getElementById('ne
     setTimeout(()=>{tr.classList.remove('show');tr.setAttribute('aria-hidden','true');if(fxRAF)cancelAnimationFrame(fxRAF);done()},kind==='institution'?780:900);
   }
   window.enterInstitute=function(id){showEntry(id,'institution',()=>openInstitute(id,true))};
-  window.launchTest=function(testId,kind){selectedTest=testId;const id=selectedInstitute||'kgs';showEntry(id,kind,()=>start(kind))};
+  window.launchTest=function(testId,kind){selectedTest=testId;try{start(kind)}catch(e){console.error('[BPN] Test launch failed',e);showTestLoadError(e&&e.message?e.message:'Unable to open this test. Please retry.')}};
 })();
 </script>
 
