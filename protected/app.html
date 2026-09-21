@@ -1024,7 +1024,7 @@ function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').
 function scrollCoachingRail(direction){const rail=document.getElementById('coachingRail');if(rail)rail.scrollBy({left:direction*Math.max(260,rail.clientWidth*.55),behavior:'smooth'});}
 
 // ===== Multi-test BCW library + quiz engine routing patch =====
-let activeData = DATA;
+var activeData = DATA;
 let activeTestMeta = null;
 
 function currentQ(){ return activeData[qidAt(i)]; }
